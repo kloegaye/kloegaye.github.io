@@ -1,0 +1,57 @@
+/* ============================================================
+   Kloe Gaye — Typography tokens
+   Display: Lexend (high-readability sans, heavier weights)
+   Body/UI: Lexend (high-readability sans)
+   Mono:    Space Mono (kickers, labels, indices)
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: "Lexend", system-ui, -apple-system, sans-serif;
+  --font-sans:    "Lexend", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Weights ---- */
+  --fw-light:     300; /* @kind font */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+  --fw-black:     900; /* @kind font */
+
+  /* ---- Fluid display sizes (clamped) ---- */
+  --text-display-2xl: clamp(3.5rem, 8vw, 7rem);     /* hero headline */
+  --text-display-xl:  clamp(2.75rem, 6vw, 5rem);
+  --text-display-lg:  clamp(2.25rem, 4.5vw, 3.5rem);
+  --text-display-md:  clamp(1.875rem, 3.2vw, 2.75rem);
+
+  /* ---- Static type scale ---- */
+  --text-3xl: 2.5rem;    /* 40 */
+  --text-2xl: 2rem;      /* 32 */
+  --text-xl:  1.5rem;    /* 24 */
+  --text-lg:  1.25rem;   /* 20 */
+  --text-md:  1.0625rem; /* 17 — base body */
+  --text-base:1rem;      /* 16 */
+  --text-sm:  0.875rem;  /* 14 */
+  --text-xs:  0.75rem;   /* 12 */
+  --text-2xs: 0.6875rem; /* 11 — mono kicker */
+
+  /* ---- Line heights ---- */
+  --leading-none:    1;
+  --leading-tight:   1.08;
+  --leading-snug:    1.22;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* ---- Letter spacing ---- */
+  --tracking-tightest: -0.04em;
+  --tracking-tight:    -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.04em;
+  --tracking-wider:    0.12em;
+  --tracking-kicker:   0.22em;  /* mono eyebrow labels */
+
+  /* ---- Semantic roles ---- */
+  --leading-display: var(--leading-tight);
+  --leading-body:    var(--leading-relaxed);
+}

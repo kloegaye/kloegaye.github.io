@@ -1,0 +1,53 @@
+/* ============================================================
+   Kloe Gaye portfolio — page-level styles
+   Interactions and responsive overrides for the landing page.
+   (Carried over from the design system's portfolio UI kit.)
+   ============================================================ */
+
+html, body { margin: 0; background: var(--bg); }
+
+/* animated nav underline */
+.kgp-navlink { position: relative; }
+.kgp-navlink::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 100%; height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .28s var(--ease-out);
+}
+.kgp-navlink:hover::after { transform: scaleX(1); }
+
+/* contact social buttons */
+.kgp-social {
+  transition: background .24s var(--ease-out), color .24s var(--ease-out), border-color .24s var(--ease-out);
+}
+.kgp-social:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+/* dark form labels (contact band) */
+.kgp-form .kg-field__label { color: var(--text-invert); }
+.kgp-form .kg-input,
+.kgp-form .kg-textarea {
+  background: rgba(251, 246, 241, 0.06);
+  border-color: var(--border-invert);
+  color: var(--text-invert);
+}
+.kgp-form .kg-input::placeholder,
+.kgp-form .kg-textarea::placeholder { color: var(--text-invert-muted); }
+
+/* responsive */
+@media (max-width: 900px) {
+  .kgp-hero-grid,
+  .kgp-work-grid,
+  .kgp-services-grid,
+  .kgp-about-grid,
+  .kgp-contact-grid { grid-template-columns: 1fr !important; }
+  .kgp-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .kgp-hero-grid > div:last-child { display: none; }
+}

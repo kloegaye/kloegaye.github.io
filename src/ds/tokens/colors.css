@@ -1,0 +1,83 @@
+/* ============================================================
+   Kloe Gaye — Color tokens
+   Palette: "Midnight & Signal"
+   Dark cinematic ground (like the reference), warm-free cool
+   near-blacks, near-white text, and a bright electric blue
+   "signal" accent (#00BCF5) for the pop.
+   ============================================================ */
+
+:root {
+  /* ---- Cool dark neutral ramp ---- */
+  --espresso:  #07090C;   /* deepest — overlays, feature bands */
+  --ink:       #0B0E12;   /* page-dark base */
+  --linen:     #12161B;   /* low panel */
+  --cream:     #161A20;   /* raised panel */
+  --sand:      #222931;   /* solid hairline */
+  --taupe:     #46505B;   /* stronger lines / faint text */
+  --graphite:  #9AA4AE;   /* muted / secondary text */
+  --white:     #FFFFFF;
+  --porcelain: #EEF3F6;   /* lightest — text, light chips on dark */
+
+  /* ---- Brand accent — electric blue signal ---- */
+  --signal:        #00BCF5;   /* primary accent */
+  --signal-bright: #5AD2FA;   /* hover / lighter on dark */
+  --signal-deep:   #0090C4;   /* pressed */
+  --signal-soft:   #08303C;   /* tinted blue panel surface */
+  --steel:         #3E6E8E;   /* secondary support */
+  --steel-soft:    #122A36;   /* tinted steel surface */
+
+  /* legacy aliases (kept so older refs resolve to the new blue) */
+  --poppy:      var(--signal);
+  --poppy-deep: var(--signal-deep);
+  --poppy-soft: var(--signal-soft);
+  --wine:       var(--steel);
+  --wine-soft:  var(--steel-soft);
+  --marigold:   #E2A23C;
+  --sage:       #6E8A99;
+
+  /* ---- Alternate accent options (documented; swap --accent) ---- */
+  --alt-violet:  #8B7CF6;
+  --alt-emerald: #2FD7A6;
+  --alt-amber:   #F5A623;
+
+  /* ---- Status ---- */
+  --success: #46C98A;
+  --warning: #E2A23C;
+  --danger:  #F0644B;
+  --info:    #00BCF5;
+
+  /* ============================================================
+     Semantic aliases — prefer these in components & layouts
+     ============================================================ */
+  --bg:             #0B0E12;
+  --bg-alt:         #12161B;
+  --surface:        #161A20;
+  --surface-sunken: #0E1217;
+  --surface-tint:   var(--signal-soft);
+
+  --border:        rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.17);
+  --divider:       rgba(255, 255, 255, 0.08);
+
+  --text:        #EEF3F6;
+  --text-muted:  #9AA4AE;
+  --text-faint:  #626C76;
+
+  --accent:        var(--signal);
+  --accent-hover:  var(--signal-bright);
+  --accent-soft:   var(--signal-soft);
+  --on-accent:     #04222C;        /* dark text on bright blue */
+
+  --accent-2:      var(--steel);
+  --accent-2-soft: var(--steel-soft);
+
+  /* Feature / contrast bands (deeper, blue-black) */
+  --bg-invert:          #06171D;
+  --surface-invert:     #10171D;
+  --text-invert:        #EEF3F6;
+  --text-invert-muted:  #93A0AB;
+  --border-invert:      rgba(255, 255, 255, 0.13);
+
+  /* Focus ring */
+  --ring: rgba(0, 188, 245, 0.45);
+}
