@@ -13,7 +13,7 @@ function Footer() {
               Let&rsquo;s build your<br /><em style={{ fontStyle: 'italic', fontWeight: 500, color: 'var(--accent)' }}>content engine</em>.
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--text-invert-muted)', maxWidth: '40ch', marginTop: 24 }}>
-              Hiring a Head of Content? Tell me about the brand and the goal &mdash; I reply within a day.
+              Hiring a Head of Content? Tell me about the brand and the goal, and I&rsquo;ll reply within a day.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
               <a href="mailto:hello@kloegaye.com" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.25rem,2.4vw,1.8rem)', color: 'var(--text-invert)', borderBottom: '1px solid var(--accent)', paddingBottom: 4 }}>
@@ -36,7 +36,7 @@ function Footer() {
             <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: 18 }} className="kgp-form">
               <Field label="Name"><Input placeholder="Your name" /></Field>
               <Field label="Company email"><Input type="email" placeholder="you@brand.com" /></Field>
-              <Field label="What do you need?"><Textarea rows={3} placeholder="We&rsquo;re launching a podcast and need someone to own content end-to-end…" /></Field>
+              <Field label="What do you need?"><Textarea rows={3} placeholder="We&rsquo;re launching a podcast and need someone to own content end to end…" /></Field>
               <Button full size="lg" arrow>Send the brief</Button>
             </form>
           </div>
@@ -44,7 +44,7 @@ function Footer() {
 
         <div style={{ borderTop: '1px solid var(--border-invert)', paddingBlock: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
           <span style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600 }}>Kloe <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>Gaye</em></span>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-invert-muted)', textTransform: 'uppercase' }}>&copy; 2026 &mdash; Head of Content</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-invert-muted)', textTransform: 'uppercase' }}>&copy; 2026 &middot; Head of Content</span>
         </div>
       </div>
     </footer>

@@ -1,0 +1,42 @@
+/* ============================================================
+   Kloe Gaye — UGC page styles
+   Layout + table styling specific to the standalone UGC page.
+   (Base tokens, components and shared helpers come from ds/ and app.css.)
+   ============================================================ */
+
+/* performance table (case study) */
+.kgp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.kgp-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 500;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--divider);
+}
+.kgp-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--divider);
+  vertical-align: top;
+}
+.kgp-table tbody tr:last-child td,
+.kgp-table tr:last-child td { border-bottom: none; }
+
+/* responsive grids unique to this page */
+@media (max-width: 1000px) {
+  .kgp-reel-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 760px) {
+  .kgp-reel-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .kgp-format-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 900px) {
+  .kgp-format-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}

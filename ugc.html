@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kloe Gaye — UGC</title>
+  <meta name="description" content="Kloe Gaye — user-generated content portfolio." />
+  <meta name="theme-color" content="#0B0E12" />
+
+  <!-- Hidden page: not linked from the main site, keep it out of search results. -->
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>This page needs JavaScript enabled to view.</noscript>
+
+  <!-- React + ReactDOM (UMD globals) and the design-system component bundle
+       load first, as classic scripts, so they're available to the module below. -->
+  <script src="/vendor/react.production.min.js"></script>
+  <script src="/vendor/react-dom.production.min.js"></script>
+  <script src="/_ds_bundle.js"></script>
+
+  <script type="module" src="/src/ugc.jsx"></script>
+</body>
+</html>

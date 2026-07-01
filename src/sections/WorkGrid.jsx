@@ -16,7 +16,7 @@ function WorkGrid() {
     <section id="work" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
         <SectionHeader kicker="Selected Work" title={<>Proof, not <em>promises</em></>}
-          lede="A few programs I&rsquo;ve led end-to-end — strategy through to the published, performing work."
+          lede="A few programs I&rsquo;ve led end to end, from strategy through to the published, performing work."
           action={<Button variant="link" arrow>All case studies</Button>} />
         <div style={{ display: 'flex', gap: 10, marginTop: 28, flexWrap: 'wrap' }}>
           {FILTERS.map((x) => (

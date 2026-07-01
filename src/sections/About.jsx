@@ -14,14 +14,14 @@ function About() {
           <div>
             <Kicker rule>About</Kicker>
             <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.08, fontSize: 'clamp(2rem,3.6vw,3rem)', margin: '18px 0 0' }}>
-              I&rsquo;ve been the whole content team &mdash; so I know how to <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>build</em> one.
+              I&rsquo;ve been the whole content team, so I know how to <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>build</em> one.
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 26, fontSize: 17, lineHeight: 1.65, color: 'var(--text-muted)', maxWidth: '52ch' }}>
               <p>For seven years I&rsquo;ve led content for founder-led and DTC brands: setting the
                 strategy, shooting and editing the work, producing the podcast, and reporting on
                 what actually moved the numbers.</p>
               <p>I hire and train freelancers, own the calendar, and keep the whole engine running
-                week after week. If you want a Head of Content who can both think and ship &mdash; that&rsquo;s the job I love.</p>
+                week after week. If you want a Head of Content who can both think and ship, that&rsquo;s the job I love.</p>
             </div>
             <div style={{ display: 'flex', gap: 10, marginTop: 28, flexWrap: 'wrap' }}>
               <Tag>7 yrs experience</Tag>

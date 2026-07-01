@@ -12,7 +12,7 @@ function Statement() {
             lineHeight: 1.14, fontSize: 'clamp(1.9rem, 4.2vw, 3.4rem)', maxWidth: '20ch',
             margin: '24px 0 0', color: 'var(--text-invert)', textWrap: 'balance',
           }}>
-            Great content doesn&rsquo;t shout. It <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>shows up</em> &mdash;
+            Great content doesn&rsquo;t shout. It <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>shows up</em>:
             on time, on brand, every single week.
           </p>
           <div style={{

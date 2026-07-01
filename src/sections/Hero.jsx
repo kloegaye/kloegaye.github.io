@@ -15,8 +15,8 @@ function Hero() {
               Content that<br /><em style={{ fontStyle: 'italic', fontWeight: 500, color: 'var(--accent)' }}>moves</em> people.
             </h1>
             <p style={{ fontSize: 'clamp(1.05rem,1.5vw,1.25rem)', lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: '44ch', marginTop: 28 }}>
-              I&rsquo;m Kloe &mdash; I build and run content programs for brands who want to be
-              watched. Strategy, short- and long-form video, and podcasts that earn attention and keep it.
+              I&rsquo;m Kloe. I build and run content programs for brands who want to be
+              watched: strategy, short and long-form video, and podcasts that earn attention and keep it.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 36, flexWrap: 'wrap' }}>
               <Button size="lg" arrow href="#work">View the work</Button>
