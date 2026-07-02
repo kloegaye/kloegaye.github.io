@@ -96,7 +96,7 @@ function TrustedBy() {
       <div style={{ ...CONTAINER, display: 'flex', alignItems: 'center', gap: 'clamp(1.5rem,4vw,3rem)', flexWrap: 'wrap', justifyContent: 'center' }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-faint)' }}>Currently creating for</span>
         <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(1.5rem,3vw,2rem)', letterSpacing: '-0.02em', color: 'var(--text)' }}>Ling</span>
-        <span style={{ fontSize: 14, color: 'var(--text-muted)' }}>the language-learning app, 4M+ downloads</span>
+        <span style={{ fontSize: 14, color: 'var(--text-muted)' }}>the language-learning app, 10M+ downloads</span>
       </div>
     </section>
   );
@@ -345,11 +345,12 @@ function About() {
         </div>
 
         <div style={{ maxWidth: 920, margin: '0 auto', paddingBottom: 'var(--section-y)' }}>
-          <Quote align="center" name="Nat D&aacute;vila Merlo" role="SEO &amp; Content Strategist &middot; worked with Kloe at Ling"
-            avatar={<Avatar name="Nat Davila Merlo" size="sm" />}>
-            She&rsquo;s incredibly creative and has a real talent for making content that people
-            <em> genuinely want to watch</em> and engage with. It was amazing to see how quickly she
-            helped grow Ling&rsquo;s social channels with engaging, fun, and viral videos.
+          <Quote align="center" name="Shay Davidovich" role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
+            avatar={<Avatar name="Shay Davidovich" size="sm" />}>
+            One of the most creative individuals I&rsquo;ve ever collaborated with. Her ability to
+            generate <em>fresh and compelling content ideas</em> is truly exceptional&hellip; Kloe not
+            only stays on top of things but excels, showcasing an impressive ability to swiftly
+            conceive and execute ideas with efficiency.
           </Quote>
         </div>
       </div>

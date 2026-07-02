@@ -29,6 +29,12 @@ html {
 }
 .kgp-navlink:hover::after { transform: scaleX(1); }
 
+/* services accordion panel — animates true content height (see Services.jsx) */
+.kgp-acc-panel {
+  display: grid;
+  transition: grid-template-rows 0.34s var(--ease-inout, ease);
+}
+
 /* contact social buttons */
 .kgp-social {
   transition: background .24s var(--ease-out), color .24s var(--ease-out), border-color .24s var(--ease-out);
