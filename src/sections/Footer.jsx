@@ -1,5 +1,5 @@
 // Kloe Gaye portfolio — contact CTA + footer
-const { Button, Kicker, IconButton, Field, Input, Textarea } = window.KloeGayeDesignSystem_152bdb;
+const { Button, Kicker } = window.KloeGayeDesignSystem_152bdb;
 
 function Footer() {
   const socials = [
@@ -38,12 +38,20 @@ function Footer() {
           </div>
 
           <div style={{ background: 'var(--surface-invert)', border: '1px solid var(--border-invert)', borderRadius: 'var(--radius-xl)', padding: 'clamp(1.5rem,3vw,2.25rem)' }}>
-            <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: 18 }} className="kgp-form">
-              <Field label="Name"><Input placeholder="Your name" /></Field>
-              <Field label="Company email"><Input type="email" placeholder="you@brand.com" /></Field>
-              <Field label="What do you need?"><Textarea rows={3} placeholder="We&rsquo;re launching a podcast and need someone to own content end to end…" /></Field>
-              <Button full size="lg" arrow>Send the brief</Button>
-            </form>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 22, letterSpacing: '-0.01em', margin: 0, color: 'var(--text-invert)' }}>
+              What to put in the brief
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '18px 0 0', display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {['The brand, and where it shows up today', 'The goal: audience, launch, revenue', 'Channels and formats you have in mind', 'Timeline and who&rsquo;s involved'].map((t) => (
+                <li key={t} style={{ display: 'flex', gap: 10, alignItems: 'baseline', fontSize: 15, lineHeight: 1.55, color: 'var(--text-invert-muted)' }}>
+                  <span aria-hidden="true" style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)', fontSize: 12 }}>&mdash;</span>
+                  <span dangerouslySetInnerHTML={{ __html: t }} />
+                </li>
+              ))}
+            </ul>
+            <div style={{ marginTop: 24 }}>
+              <Button full size="lg" arrow href="mailto:kloegayem@gmail.com?subject=Content%20brief">Send the brief</Button>
+            </div>
           </div>
         </div>
 

@@ -20,7 +20,7 @@ function Hero() {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 36, flexWrap: 'wrap' }}>
               <Button size="lg" arrow href="#work">View the work</Button>
-              <Button variant="ghost" arrow href="#podcast">Listen to the podcast</Button>
+              <Button variant="ghost" arrow href="#about">More about me</Button>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 34 }}>
               <Badge variant="success" dot>Open to lead roles</Badge>
@@ -37,8 +37,8 @@ function Hero() {
               border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '14px 18px',
               boxShadow: 'var(--shadow-md)',
             }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>3.4M</div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: 4 }}>views / 6&nbsp;months</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>+150%</div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: 4 }}>market share &middot; organic social</div>
             </div>
           </div>
         </div>

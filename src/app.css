@@ -6,6 +6,15 @@
 
 html, body { margin: 0; background: var(--bg); }
 
+/* smooth in-page anchor scrolling; padding keeps sections clear of the sticky nav */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 /* animated nav underline */
 .kgp-navlink { position: relative; }
 .kgp-navlink::after {

@@ -13,7 +13,7 @@ function Nav() {
     return () => el.removeEventListener('scroll', onScroll);
   }, []);
 
-  const links = [['Work', '#work'], ['Services', '#services'], ['About', '#about'], ['Podcast', '#podcast']];
+  const links = [['Work', '#work'], ['Services', '#services'], ['About', '#about']];
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 100,

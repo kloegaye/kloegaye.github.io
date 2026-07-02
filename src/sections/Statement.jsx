@@ -20,10 +20,10 @@ function Statement() {
             marginTop: 'clamp(2.5rem,5vw,4.5rem)', paddingTop: 'clamp(2rem,4vw,3rem)',
             borderTop: '1px solid var(--border-invert)',
           }} className="kgp-stats-grid">
-            <Stat tone="invert" value="3.4" suffix="M" label="Organic views in six months" />
-            <Stat tone="invert" value="62" suffix="%" label="Lift in saves per post" />
-            <Stat tone="invert" value="120" suffix="+" label="Episodes shipped on schedule" />
-            <Stat tone="invert" value="4" suffix="x" label="Output with the same budget" />
+            <Stat tone="invert" value="150" suffix="%+" label="Market share growth from organic Instagram" />
+            <Stat tone="invert" value="$344" suffix="K+" label="Revenue earned through Meta Ads creatives" />
+            <Stat tone="invert" value="160" label="UGC creatives written, shot &amp; tested" />
+            <Stat tone="invert" value="7" suffix="yrs" label="Content across nonprofit &amp; start-up tech" />
           </div>
         </div>
       </div>
