@@ -3,8 +3,8 @@ const { Button, Kicker } = window.KloeGayeDesignSystem_152bdb;
 
 function Footer() {
   const socials = [
-    ['instagram', '#'], // TODO: needs Kloe's personal handle (CV only lists Ling's work accounts)
-    ['youtube', '#'], // TODO: needs Kloe's personal handle
+    ['instagram', 'https://www.instagram.com/kloegaye'],
+    ['youtube', 'https://www.youtube.com/@kloegaye2893'],
     ['linkedin', 'https://www.linkedin.com/in/kloegaye/'],
     ['mail', 'mailto:kloegayem@gmail.com'],
   ];
