@@ -33,10 +33,12 @@ function About() {
 
         <div style={{ marginTop: 'clamp(3rem,6vw,5rem)', paddingTop: 'clamp(2.5rem,4vw,3.5rem)', borderTop: '1px solid var(--divider)' }}>
           <div style={{ maxWidth: 920, margin: '0 auto', textAlign: 'center' }}>
-            <Quote align="center" name="Amara Rivera" role="Founder, Maed Studio"
-              avatar={<Avatar name="Amara Rivera" size="sm" />}>
-              Kloe gave us a content engine that <em>runs itself</em>. Six months in, inbound doubled
-              and we finally sound like one brand everywhere.
+            <Quote align="center" name="Shay Davidovich" role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
+              avatar={<Avatar name="Shay Davidovich" size="sm" />}>
+              One of the most creative individuals I&rsquo;ve ever collaborated with&hellip; she went
+              beyond merely leading; she dedicated herself to training, guiding, and ensuring a rich
+              tapestry of content. Her contributions, especially in the dynamic world of social media,
+              have been <em>instrumental</em> in our team&rsquo;s success.
             </Quote>
           </div>
         </div>

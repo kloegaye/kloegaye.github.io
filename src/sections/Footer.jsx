@@ -2,7 +2,12 @@
 const { Button, Kicker, IconButton, Field, Input, Textarea } = window.KloeGayeDesignSystem_152bdb;
 
 function Footer() {
-  const socials = [['instagram', '#'], ['youtube', '#'], ['linkedin', '#'], ['mail', '#']];
+  const socials = [
+    ['instagram', '#'], // TODO: needs Kloe's personal handle (CV only lists Ling's work accounts)
+    ['youtube', '#'], // TODO: needs Kloe's personal handle
+    ['linkedin', 'https://www.linkedin.com/in/kloegaye/'],
+    ['mail', 'mailto:kloegayem@gmail.com'],
+  ];
   return (
     <footer id="contact" style={{ background: 'var(--bg-invert)', color: 'var(--text-invert)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
@@ -16,8 +21,8 @@ function Footer() {
               Hiring a Head of Content? Tell me about the brand and the goal, and I&rsquo;ll reply within a day.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
-              <a href="mailto:hello@kloegaye.com" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.25rem,2.4vw,1.8rem)', color: 'var(--text-invert)', borderBottom: '1px solid var(--accent)', paddingBottom: 4 }}>
-                hello@kloegaye.com
+              <a href="mailto:kloegayem@gmail.com" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.25rem,2.4vw,1.8rem)', color: 'var(--text-invert)', borderBottom: '1px solid var(--accent)', paddingBottom: 4 }}>
+                kloegayem@gmail.com
               </a>
             </div>
             <div style={{ display: 'flex', gap: 12, marginTop: 34 }}>

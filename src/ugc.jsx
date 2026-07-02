@@ -345,16 +345,12 @@ function About() {
         </div>
 
         <div style={{ maxWidth: 920, margin: '0 auto', paddingBottom: 'var(--section-y)' }}>
-          <Quote align="center" role="Manager &middot; ICRC Global Communications"
-            avatar={<Avatar name="ICRC" size="sm" />}>
-            One of the most creative people I&rsquo;ve managed. Kloe turns fresh ideas into
-            finished content <em>fast</em>, without dropping quality. She led our TikTok task force
-            end to end, trained the team, and tailored content that landed with audiences all over
-            the world.
+          <Quote align="center" name="Nat D&aacute;vila Merlo" role="SEO &amp; Content Strategist &middot; worked with Kloe at Ling"
+            avatar={<Avatar name="Nat Davila Merlo" size="sm" />}>
+            She&rsquo;s incredibly creative and has a real talent for making content that people
+            <em> genuinely want to watch</em> and engage with. It was amazing to see how quickly she
+            helped grow Ling&rsquo;s social channels with engaging, fun, and viral videos.
           </Quote>
-          <p style={{ textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-faint)', marginTop: 14, textTransform: 'uppercase' }}>
-            Add reviewer name
-          </p>
         </div>
       </div>
     </section>
