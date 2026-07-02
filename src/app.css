@@ -6,6 +6,9 @@
 
 html, body { margin: 0; background: var(--bg); }
 
+/* no horizontal scroll on mobile — clip (not hidden: no new scroll container) */
+html, body { overflow-x: clip; }
+
 /* smooth in-page anchor scrolling; padding keeps sections clear of the sticky nav */
 html {
   scroll-behavior: smooth;
@@ -13,6 +16,12 @@ html {
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* small screens: nav collapses to logo + CTA (links don't fit at 390px).
+   Scoped to nav so the UGC header's logo link (same class) is unaffected. */
+@media (max-width: 680px) {
+  nav .kgp-navlink { display: none; }
 }
 
 /* animated nav underline */
