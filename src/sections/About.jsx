@@ -6,9 +6,9 @@ function About() {
     <section id="about" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 'clamp(2rem,5vw,5rem)', alignItems: 'center' }} className="kgp-about-grid">
-          <div style={{ position: 'relative' }}>
-            <div style={{ aspectRatio: '5/6', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-              <img src="https://picsum.photos/seed/kgabout6/800/960" alt="Kloe at work" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: 'min(420px, 100%)', aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', background: 'var(--surface-sunken)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-md)' }}>
+              <img src="/images/kloe.jpg" alt="Kloe Gaye" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
             </div>
           </div>
           <div>
