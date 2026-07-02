@@ -11,19 +11,19 @@ const WORK = [
     href: '/ugc.html',
   },
   {
-    id: 2, cat: 'Social', image: 'https://picsum.photos/seed/kgwork22/900/680', category: 'Organic social · Ling', year: '2024–26',
+    id: 2, cat: 'Social', image: '/images/work-organic.jpg', category: 'Organic social · Ling', year: '2024–26',
     title: <>+150% market share, all <em>organic</em></>, tags: ['Instagram', 'YouTube', 'Strategy'],
     href: 'https://www.instagram.com/ling_app/', external: true,
   },
   {
-    id: 3, cat: 'Social', image: 'https://picsum.photos/seed/kgwork33/900/680', category: 'Social · Nonprofit', year: '2021–23',
+    id: 3, cat: 'Social', image: '/images/work-icrc.jpg', category: 'Social · Nonprofit', year: '2021–23',
     title: <>The ICRC&rsquo;s global <em>TikTok</em> task force</>, tags: ['TikTok', 'Team training', 'Global campaigns'],
     href: 'https://www.tiktok.com/@icrc', external: true,
   },
   {
-    id: 4, cat: 'ASO', image: 'https://picsum.photos/seed/kgwork44/900/680', category: 'App Store Optimization · Ling', year: '2024–26',
+    id: 4, cat: 'ASO', image: '/images/work-aso.png', category: 'App Store Optimization · Ling', year: '2024–26',
     title: <>Two markets, <em>found</em> in the stores</>, tags: ['ASO', 'Apple Search Ads', 'UK & AU'],
-    href: 'https://ling-app.com', external: true,
+    href: 'https://apps.apple.com/gb/app/language-learning-with-ling/id1403783779', external: true,
   },
 ];
 const FILTERS = ['All', 'Social', 'Video', 'ASO'];

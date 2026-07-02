@@ -29,7 +29,7 @@ function Hero() {
           </div>
           <div style={{ position: 'relative' }}>
             <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-              <img src="https://picsum.photos/seed/kgportrait4/720/900" alt="Kloe Gaye" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+              <img src="/images/hero-podcast.jpg" alt="Kloe Gaye recording her podcast" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(37,28,30,0) 60%, rgba(37,28,30,0.25))' }} />
             </div>
             <div style={{
@@ -46,7 +46,7 @@ function Hero() {
       <div style={{ borderTop: '1px solid var(--divider)', borderBottom: '1px solid var(--divider)', padding: '20px 0', marginTop: 'clamp(1rem,3vw,2.5rem)' }}>
         <Marquee items={[
           <>Social <em>strategy</em></>, 'Short-form video', 'Podcast production',
-          <>Content <em>calendars</em></>, 'Marketing analytics', 'Long-form video', 'Team &amp; schedules',
+          <>Content <em>calendars</em></>, 'Marketing analytics', 'Long-form video', <>Team &amp; schedules</>,
         ]} />
       </div>
     </section>

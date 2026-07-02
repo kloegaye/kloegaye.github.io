@@ -67,7 +67,7 @@ function Hero() {
           </div>
           <div style={{ position: 'relative' }}>
             <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-              <img src="https://picsum.photos/seed/kgugc-portrait/720/900" alt="Kloe Gaye on camera" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+              <img src="/images/ugc-hero.jpg" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(37,28,30,0) 60%, rgba(37,28,30,0.25))' }} />
             </div>
             <div style={{ position: 'absolute', bottom: -18, left: -18, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '14px 18px', boxShadow: 'var(--shadow-md)' }}>
@@ -79,7 +79,7 @@ function Hero() {
       </div>
       <div style={{ borderTop: '1px solid var(--divider)', borderBottom: '1px solid var(--divider)', padding: '20px 0' }}>
         <Marquee items={[
-          <>Native-speaker <em>hooks</em></>, 'Before &amp; after', <>Competitor <em>switch</em></>,
+          <>Native-speaker <em>hooks</em></>, <>Before &amp; after</>, <>Competitor <em>switch</em></>,
           'App demos', 'Testimonials', <>Multilingual <em>UGC</em></>, 'Paid-ready edits',
         ]} />
       </div>
@@ -321,7 +321,7 @@ function About() {
       <div style={CONTAINER}>
         <div className="kgp-about-grid" style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 'clamp(2rem,5vw,5rem)', alignItems: 'center', paddingBlock: 'var(--section-y)' }}>
           <div style={{ aspectRatio: '5/6', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-            <img src="https://picsum.photos/seed/kgugc-about/800/960" alt="Kloe filming" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+            <img src="/images/ugc-filming.jpg" alt="Kloe filming herself on a phone" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
           </div>
           <div>
             <Kicker rule>About</Kicker>
