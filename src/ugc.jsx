@@ -5,8 +5,8 @@
 // classic <script> tags before this module, so they're available as globals.
 //
 // Content is real: numbers are pulled from Kloe's Ling analytics (Q4 2025 UGC
-// ad set, filtered to her own on-camera creatives) and her CV. The video tiles
-// use placeholder imagery — swap `src`/`href` for the real Google Drive links.
+// ad set, filtered to her own on-camera creatives) and her CV. The reel tiles
+// play real creatives from public/reels/ (compressed from her Drive portfolio).
 
 import './ds/styles.css';
 import './app.css';
@@ -14,7 +14,7 @@ import './ugc.css';
 
 const {
   Kicker, Badge, Button, SectionHeader, Tag,
-  ReelCard, Stat, Quote, Avatar, Marquee, Card,
+  Stat, Quote, Avatar, Marquee, Card,
 } = window.KloeGayeDesignSystem_152bdb;
 
 const CONTAINER = { maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' };
@@ -133,18 +133,72 @@ function Results() {
 
 /* ------------------------------------------------------------------ *
  * Reels — curated best work first (best-practice: hooks up top).
- * Placeholders — swap image/href for the real Google Drive links.
+ * Real videos, compressed for web, in public/reels/. Click to play.
  * ------------------------------------------------------------------ */
+// `stat` = ad-set performance where the creative maps to a concept in the
+// Q4 2025 ROAS export (same figures as the case-study table below). Organic
+// and ICRC tiles carry no revenue claim.
 const REELS = [
-  { seed: 'kgugc-nativethai', platform: 'Reels', title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
-  { seed: 'kgugc-leaveduo', platform: 'TikTok', title: <>&ldquo;Why I left Duolingo&rdquo;</> },
-  { seed: 'kgugc-beforeafter', platform: 'Reels', title: <>Before &amp; after 30 days of Ling</> },
-  { seed: 'kgugc-tagalog', platform: 'Shorts', title: <>Teaching Tagalog in 15 seconds</> },
-  { seed: 'kgugc-soundnative', platform: 'Reels', title: <>Sound like a native: Khmer</> },
-  { seed: 'kgugc-mahalkita', platform: 'TikTok', title: <>&ldquo;Mahal kita&rdquo; &amp; other phrases</> },
-  { seed: 'kgugc-minigame', platform: 'Shorts', title: <>The app minigame demo</> },
-  { seed: 'kgugc-kaibigan', platform: 'Reels', title: <>Making friends in a new language</> },
+  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>$20K+ revenue &middot; 742 purchases</>, title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
+  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>$7K revenue &middot; 252 purchases</>, title: <>The winning hook, cut for Tagalog</> },
+  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>161 purchases</>, title: <>Real voices, not an AI</> },
+  { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
+  { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', title: <>Tagalog greetings: formal vs casual</> },
+  { slug: 'filipino-romantic-names', platform: 'TikTok', duration: '0:36', title: <>&ldquo;Mahal ko&rdquo; &amp; other pet names</> },
+  { slug: 'tagalog-cebuano', platform: 'TikTok', duration: '0:20', title: <>Tagalog vs Cebuano: emotions</> },
+  { slug: 'icrc-finger-down', platform: 'TikTok · ICRC', duration: '0:52', title: <>Put a finger down, conflict edition</> },
 ];
+
+/*
+ * Same look as the ds ReelCard (reuses its .kg-reel classes), but wraps a
+ * real <video>: poster still, click/keyboard to toggle, one playing at a time.
+ */
+function VideoReel({ slug, platform, title, duration, stat }) {
+  const ref = React.useRef(null);
+  const [playing, setPlaying] = React.useState(false);
+
+  const toggle = () => {
+    const v = ref.current;
+    if (!v) return;
+    if (v.paused) {
+      document.querySelectorAll('.kgp-reel-live video').forEach((o) => { if (o !== v) o.pause(); });
+      v.play();
+    } else {
+      v.pause();
+    }
+  };
+
+  return (
+    <div
+      className={`kg-reel kgp-reel-live${playing ? ' is-playing' : ''}`}
+      role="button" tabIndex={0}
+      aria-label={playing ? 'Pause video' : 'Play video'}
+      onClick={toggle}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }}
+    >
+      <video
+        ref={ref}
+        src={`/reels/${slug}.mp4`}
+        poster={`/reels/${slug}.jpg`}
+        preload="none" playsInline
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={() => { setPlaying(false); if (ref.current) ref.current.currentTime = 0; }}
+      />
+      <div className="kg-reel__scrim" />
+      <div className="kg-reel__top">
+        <span className="kg-reel__platform">{platform}</span>
+      </div>
+      <div className="kg-reel__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+      </div>
+      <div className="kg-reel__bottom">
+        <div className="kg-reel__title">{title}</div>
+        <div className="kg-reel__stat">{stat ?? <><b>{duration}</b> &middot; sound on</>}</div>
+      </div>
+    </div>
+  );
+}
 
 function Reels() {
   return (
@@ -155,13 +209,11 @@ function Reels() {
           action={<Button variant="link" arrow href="mailto:kloegayem@gmail.com">Request full reel</Button>} />
         <div className="kgp-reel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1rem,2vw,1.75rem)', marginTop: 38 }}>
           {REELS.map((r) => (
-            <ReelCard key={r.seed} platform={r.platform} title={r.title}
-              image={`https://picsum.photos/seed/${r.seed}/540/960`}
-              alt="UGC video still" href="#" />
+            <VideoReel key={r.slug} {...r} />
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-faint)', marginTop: 20, textTransform: 'uppercase' }}>
-          Placeholder stills. Full-length videos available on request.
+          A selection from 160+ creatives. Full library on request.
         </p>
       </div>
     </section>
@@ -172,7 +224,7 @@ function Reels() {
  * Case study — the flagship concept, with the real performance table.
  * ------------------------------------------------------------------ */
 const CASE_ROWS = [
-  { concept: 'Native Thai (flagship)', variants: '“A native reacts to your accent”, 8+ language cuts', revenue: '$18,032', purchases: '644', roas: '96%' },
+  { concept: 'Native Thai (flagship)', variants: '“A native reacts to your accent”, 8+ language cuts', revenue: '$20,776', purchases: '742', roas: '97%' },
   { concept: 'Native Thai × Tagalog', variants: 'Cross-language remix of the winning hook', revenue: '$7,056', purchases: '252', roas: '101%' },
   { concept: 'Leave Duolingo', variants: 'Competitor-switch narrative, AI iteration', revenue: '$4,508', purchases: '161', roas: '88%' },
   { concept: 'Native Thai EN-TH', variants: 'Tightest edit, best sustained ROAS', revenue: '$1,316', purchases: '47', roas: '124%' },
