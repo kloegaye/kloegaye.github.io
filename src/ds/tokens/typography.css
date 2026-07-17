@@ -1,5 +1,5 @@
 /* ============================================================
-   Kloe Gaye — Typography tokens
+   Kloe Gaye - Typography tokens
    Display: Lexend (high-readability sans, heavier weights)
    Body/UI: Lexend (high-readability sans)
    Mono:    Space Mono (kickers, labels, indices)
@@ -30,11 +30,11 @@
   --text-2xl: 2rem;      /* 32 */
   --text-xl:  1.5rem;    /* 24 */
   --text-lg:  1.25rem;   /* 20 */
-  --text-md:  1.0625rem; /* 17 — base body */
+  --text-md:  1.0625rem; /* 17 - base body */
   --text-base:1rem;      /* 16 */
   --text-sm:  0.875rem;  /* 14 */
   --text-xs:  0.75rem;   /* 12 */
-  --text-2xs: 0.6875rem; /* 11 — mono kicker */
+  --text-2xs: 0.6875rem; /* 11 - mono kicker */
 
   /* ---- Line heights ---- */
   --leading-none:    1;

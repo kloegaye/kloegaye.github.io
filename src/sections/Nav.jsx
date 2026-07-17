@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio — sticky navigation
+// Kloe Gaye portfolio - sticky navigation
 const { Button } = window.KloeGayeDesignSystem_152bdb;
 
 function Nav() {

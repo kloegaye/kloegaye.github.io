@@ -1,12 +1,12 @@
 /* ============================================================
-   Kloe Gaye portfolio — page-level styles
+   Kloe Gaye portfolio - page-level styles
    Interactions and responsive overrides for the landing page.
    (Carried over from the design system's portfolio UI kit.)
    ============================================================ */
 
 html, body { margin: 0; background: var(--bg); }
 
-/* no horizontal scroll on mobile — clip (not hidden: no new scroll container) */
+/* no horizontal scroll on mobile - clip (not hidden: no new scroll container) */
 html, body { overflow-x: clip; }
 
 /* smooth in-page anchor scrolling; padding keeps sections clear of the sticky nav */
@@ -38,7 +38,7 @@ html {
 }
 .kgp-navlink:hover::after { transform: scaleX(1); }
 
-/* services accordion panel — animates true content height (see Services.jsx) */
+/* services accordion panel - animates true content height (see Services.jsx) */
 .kgp-acc-panel {
   display: grid;
   transition: grid-template-rows 0.34s var(--ease-inout, ease);

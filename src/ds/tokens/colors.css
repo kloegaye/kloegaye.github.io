@@ -1,5 +1,5 @@
 /* ============================================================
-   Kloe Gaye — Color tokens
+   Kloe Gaye - Color tokens
    Palette: "Midnight & Signal"
    Dark cinematic ground (like the reference), warm-free cool
    near-blacks, near-white text, and a bright electric blue
@@ -8,7 +8,7 @@
 
 :root {
   /* ---- Cool dark neutral ramp ---- */
-  --espresso:  #07090C;   /* deepest — overlays, feature bands */
+  --espresso:  #07090C;   /* deepest - overlays, feature bands */
   --ink:       #0B0E12;   /* page-dark base */
   --linen:     #12161B;   /* low panel */
   --cream:     #161A20;   /* raised panel */
@@ -16,9 +16,9 @@
   --taupe:     #46505B;   /* stronger lines / faint text */
   --graphite:  #9AA4AE;   /* muted / secondary text */
   --white:     #FFFFFF;
-  --porcelain: #EEF3F6;   /* lightest — text, light chips on dark */
+  --porcelain: #EEF3F6;   /* lightest - text, light chips on dark */
 
-  /* ---- Brand accent — electric blue signal ---- */
+  /* ---- Brand accent - electric blue signal ---- */
   --signal:        #00BCF5;   /* primary accent */
   --signal-bright: #5AD2FA;   /* hover / lighter on dark */
   --signal-deep:   #0090C4;   /* pressed */
@@ -47,7 +47,7 @@
   --info:    #00BCF5;
 
   /* ============================================================
-     Semantic aliases — prefer these in components & layouts
+     Semantic aliases - prefer these in components & layouts
      ============================================================ */
   --bg:             #0B0E12;
   --bg-alt:         #12161B;

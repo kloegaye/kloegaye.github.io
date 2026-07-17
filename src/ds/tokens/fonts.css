@@ -1,10 +1,10 @@
 /* ============================================================
-   Kloe Gaye — Webfonts
+   Kloe Gaye - Webfonts
    Loaded via Google Fonts CDN (not self-hosted yet).
    To self-host: download the families below and replace this
    @import with local @font-face rules pointing at the binaries.
-   - Lexend       — high-readability sans (headings, body + UI)
-   - Space Mono   — monospace (kickers, labels, indices, metadata)
+   - Lexend       - high-readability sans (headings, body + UI)
+   - Space Mono   - monospace (kickers, labels, indices, metadata)
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');

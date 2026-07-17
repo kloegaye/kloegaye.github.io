@@ -1,4 +1,4 @@
-// Kloe Gaye — UGC creator page entry.
+// Kloe Gaye - UGC creator page entry.
 //
 // Separate, unlinked entry point (see ugc.html). Same global-bundle setup as
 // main.jsx: React/ReactDOM and window.KloeGayeDesignSystem_152bdb are loaded as
@@ -20,7 +20,7 @@ const {
 const CONTAINER = { maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' };
 
 /* ------------------------------------------------------------------ *
- * Header — minimal, links back to the main portfolio.
+ * Header - minimal, links back to the main portfolio.
  * ------------------------------------------------------------------ */
 function Header() {
   return (
@@ -39,7 +39,7 @@ function Header() {
 }
 
 /* ------------------------------------------------------------------ *
- * Hero — positioning + the single strongest number.
+ * Hero - positioning + the single strongest number.
  * ------------------------------------------------------------------ */
 function Hero() {
   return (
@@ -66,13 +66,12 @@ function Hero() {
             </div>
           </div>
           <div style={{ position: 'relative' }}>
-            <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-              <img src="/images/ugc-hero.jpg" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(37,28,30,0) 60%, rgba(37,28,30,0.25))' }} />
+            <div style={{ position: 'relative' }}>
+              <img src="/images/ugc-hero.png" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ display: 'block', width: '100%', height: 'auto', filter: 'saturate(1.02) contrast(1.02)' }} />
             </div>
             <div style={{ position: 'absolute', bottom: -18, left: -18, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '14px 18px', boxShadow: 'var(--shadow-md)' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>$344K+</div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: 4 }}>revenue driven &middot; Meta Ads</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>6-figure</div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: 4 }}>USD revenue driven &middot; Meta Ads</div>
             </div>
           </div>
         </div>
@@ -88,7 +87,7 @@ function Hero() {
 }
 
 /* ------------------------------------------------------------------ *
- * Trusted-by — one honest logo line.
+ * Trusted-by - one honest logo line.
  * ------------------------------------------------------------------ */
 function TrustedBy() {
   return (
@@ -103,7 +102,7 @@ function TrustedBy() {
 }
 
 /* ------------------------------------------------------------------ *
- * Results — the numbers band (dark). Straight from the analytics.
+ * Results - the numbers band (dark). Straight from the analytics.
  * ------------------------------------------------------------------ */
 function Results() {
   return (
@@ -115,9 +114,9 @@ function Results() {
             I don&rsquo;t guess. I ship, <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>test</em>, and scale what converts.
           </p>
           <div className="kgp-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1.5rem,3vw,3rem)', marginTop: 'clamp(2.5rem,5vw,4.5rem)', paddingTop: 'clamp(2rem,4vw,3rem)', borderTop: '1px solid var(--border-invert)' }}>
-            <Stat tone="invert" value="$344" suffix="K+" label="Revenue driven via Meta Ads creatives" />
-            <Stat tone="invert" value="300" suffix="%+" label="Peak ROAS on top-performing creatives" />
-            <Stat tone="invert" value="1,267" label="App purchases from one quarter of UGC" />
+            <Stat tone="invert" value="6" suffix="-figure" label="USD revenue driven via Meta Ads creatives" />
+            <Stat tone="invert" value="3" suffix="x+" label="Account-average ROAS, beaten by top creatives" />
+            <Stat tone="invert" value="1,200" suffix="+" label="App purchases from one quarter of UGC" />
             <Stat tone="invert" value="160" label="UGC creatives written, shot &amp; tested" />
           </div>
         </div>
@@ -132,16 +131,17 @@ function Results() {
 }
 
 /* ------------------------------------------------------------------ *
- * Reels — curated best work first (best-practice: hooks up top).
+ * Reels - curated best work first (best-practice: hooks up top).
  * Real videos, compressed for web, in public/reels/. Click to play.
  * ------------------------------------------------------------------ */
 // `stat` = ad-set performance where the creative maps to a concept in the
-// Q4 2025 ROAS export (same figures as the case-study table below). Organic
+// Q4 2025 performance export (same de-identified figures as the case-study
+// table below - exact revenue/ROAS withheld at the brand's request). Organic
 // and ICRC tiles carry no revenue claim.
 const REELS = [
-  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>$20K+ revenue &middot; 742 purchases</>, title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
-  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>$7K revenue &middot; 252 purchases</>, title: <>The winning hook, cut for Tagalog</> },
-  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>161 purchases</>, title: <>Real voices, not an AI</> },
+  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>Top earner &middot; 700+ purchases</>, title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
+  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>250+ purchases</>, title: <>The winning hook, cut for Tagalog</> },
+  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>160+ purchases</>, title: <>Real voices, not an AI</> },
   { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
   { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', title: <>Tagalog greetings: formal vs casual</> },
   { slug: 'filipino-romantic-names', platform: 'TikTok', duration: '0:36', title: <>&ldquo;Mahal ko&rdquo; &amp; other pet names</> },
@@ -221,13 +221,13 @@ function Reels() {
 }
 
 /* ------------------------------------------------------------------ *
- * Case study — the flagship concept, with the real performance table.
+ * Case study - the flagship concept, with the real performance table.
  * ------------------------------------------------------------------ */
 const CASE_ROWS = [
-  { concept: 'Native Thai (flagship)', variants: '“A native reacts to your accent”, 8+ language cuts', revenue: '$20,776', purchases: '742', roas: '97%' },
-  { concept: 'Native Thai × Tagalog', variants: 'Cross-language remix of the winning hook', revenue: '$7,056', purchases: '252', roas: '101%' },
-  { concept: 'Leave Duolingo', variants: 'Competitor-switch narrative, AI iteration', revenue: '$4,508', purchases: '161', roas: '88%' },
-  { concept: 'Native Thai EN-TH', variants: 'Tightest edit, best sustained ROAS', revenue: '$1,316', purchases: '47', roas: '124%' },
+  { concept: 'Native Thai (flagship)', variants: '“A native reacts to your accent”, 8+ language cuts', share: '62%', purchases: '700+' },
+  { concept: 'Native Thai × Tagalog', variants: 'Cross-language remix of the winning hook', share: '21%', purchases: '250+' },
+  { concept: 'Leave Duolingo', variants: 'Competitor-switch narrative, AI iteration', share: '13%', purchases: '160+' },
+  { concept: 'Native Thai EN-TH', variants: 'Tightest edit, best sustained ROAS', share: '4%', purchases: '45+' },
 ];
 
 function CaseStudy() {
@@ -250,9 +250,8 @@ function CaseStudy() {
                 <thead>
                   <tr>
                     <th>Creative concept</th>
-                    <th style={{ textAlign: 'right' }}>Revenue</th>
+                    <th style={{ textAlign: 'right' }}>Revenue share</th>
                     <th style={{ textAlign: 'right' }}>Purchases</th>
-                    <th style={{ textAlign: 'right' }}>ROAS</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -262,16 +261,16 @@ function CaseStudy() {
                         <div style={{ fontWeight: 600, color: 'var(--text)' }}>{row.concept}</div>
                         <div style={{ fontSize: 12.5, color: 'var(--text-muted)', marginTop: 3 }}>{row.variants}</div>
                       </td>
-                      <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', color: 'var(--text)' }}>{row.revenue}</td>
+                      <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', color: 'var(--accent)', fontWeight: 600 }}>{row.share}</td>
                       <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', color: 'var(--text)' }}>{row.purchases}</td>
-                      <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', color: 'var(--accent)', fontWeight: 600 }}>{row.roas}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div style={{ padding: '14px 20px', borderTop: '1px solid var(--divider)', fontSize: 12.5, color: 'var(--text-muted)' }}>
-              First-purchase revenue, Meta Ads, Q4 2025. Top deliveries peaked above 300% ROAS.
+              Share of tracked first-purchase revenue, Meta Ads, Q4 2025. Top creatives peaked at 3x the
+              account&rsquo;s average ROAS. Exact revenue and ROAS figures available on request.
             </div>
           </Card>
         </div>
@@ -281,7 +280,7 @@ function CaseStudy() {
 }
 
 /* ------------------------------------------------------------------ *
- * Content types — the formats I make (derived from real creatives).
+ * Content types - the formats I make (derived from real creatives).
  * ------------------------------------------------------------------ */
 const FORMATS = [
   { title: 'Native-speaker hooks', body: 'Authority-led openers, like “a native reacts to your accent,” that earn trust in the first second.' },

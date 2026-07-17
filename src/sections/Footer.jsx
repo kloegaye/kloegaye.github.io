@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio — contact CTA + footer
+// Kloe Gaye portfolio - contact CTA + footer
 const { Button, Kicker } = window.KloeGayeDesignSystem_152bdb;
 
 function Footer() {

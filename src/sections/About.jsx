@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio — about + testimonial
+// Kloe Gaye portfolio - about + testimonial
 const { Kicker, Quote, Avatar, Tag } = window.KloeGayeDesignSystem_152bdb;
 
 function About() {

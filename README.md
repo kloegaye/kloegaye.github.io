@@ -1,4 +1,4 @@
-# Kloe Gaye — Portfolio
+# Kloe Gaye - Portfolio
 
 Static portfolio site for **Kloe Gaye** (digital-marketing strategist & Head of
 Content), built with the **Kloe Gaye design system** and deployed to GitHub Pages.
@@ -7,10 +7,10 @@ Live: https://kloegaye.github.io/
 
 ## Stack
 
-- **Vite** — builds to static HTML/CSS/JS in `dist/`.
-- **React 18** (UMD globals) — loaded as a classic `<script>`, not bundled, so it
+- **Vite** - builds to static HTML/CSS/JS in `dist/`.
+- **React 18** (UMD globals) - loaded as a classic `<script>`, not bundled, so it
   matches the runtime the design-system bundle was compiled against.
-- **Kloe Gaye design system** — the compiled component bundle
+- **Kloe Gaye design system** - the compiled component bundle
   (`public/_ds_bundle.js`, exposing `window.KloeGayeDesignSystem_152bdb`), its
   tokens (`src/ds/tokens/`), and the `styles.css` entry point. Synced from the
   design system project on claude.ai/design.
@@ -55,12 +55,12 @@ Source** and select **GitHub Actions**.
 
 ## Notes / placeholders to replace
 
-The content is the design system's placeholder portfolio — swap for Kloe's real
+The content is the design system's placeholder portfolio - swap for Kloe's real
 material:
 
-- **Imagery** — currently `picsum.photos` seeds (Hero portrait, About, WorkCard
+- **Imagery** - currently `picsum.photos` seeds (Hero portrait, About, WorkCard
   images). Replace with real photos/work.
-- **Copy & case studies** — `src/sections/WorkGrid.jsx`, `Services.jsx`, `About.jsx`.
-- **Contact** — `hello@kloegaye.com` and the social links (`#`) in `Footer.jsx`.
-- **Fonts** — Lexend + Space Mono load from Google Fonts CDN
+- **Copy & case studies** - `src/sections/WorkGrid.jsx`, `Services.jsx`, `About.jsx`.
+- **Contact** - `hello@kloegaye.com` and the social links (`#`) in `Footer.jsx`.
+- **Fonts** - Lexend + Space Mono load from Google Fonts CDN
   (`src/ds/tokens/fonts.css`); self-host for production/offline if desired.

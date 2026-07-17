@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio — hero
+// Kloe Gaye portfolio - hero
 const { Button, Kicker, Marquee, Badge } = window.KloeGayeDesignSystem_152bdb;
 
 function Hero() {

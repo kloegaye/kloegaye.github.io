@@ -12,7 +12,7 @@ const __ds_scope = {};
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Avatar
+ * Kloe Gaye - Avatar
  * Round avatar with image or initials fallback. Optional status ring.
  */
 
@@ -62,7 +62,7 @@ Object.assign(__ds_scope, { Avatar });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Badge
+ * Kloe Gaye - Badge
  * Small status / count marker. Quieter than a Tag, used inline.
  */
 
@@ -106,7 +106,7 @@ Object.assign(__ds_scope, { Badge });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Kicker
+ * Kloe Gaye - Kicker
  * Monospace eyebrow label that sits above headlines. Optional index + rule.
  */
 
@@ -152,7 +152,7 @@ Object.assign(__ds_scope, { Kicker });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Tag
+ * Kloe Gaye - Tag
  * Category / filter pill. Use for content categories, services, filters.
  */
 
@@ -214,7 +214,7 @@ Object.assign(__ds_scope, { Tag });
 // components/content/Accordion.jsx
 try { (() => {
 /**
- * Kloe Gaye — Accordion
+ * Kloe Gaye - Accordion
  * Services / FAQ list. Editorial: serif item titles, thin rules, +/- toggle.
  */
 
@@ -292,7 +292,7 @@ Object.assign(__ds_scope, { Accordion });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Card
+ * Kloe Gaye - Card
  * Generic surface container. Subtle warm border, optional hover lift.
  */
 
@@ -343,7 +343,7 @@ Object.assign(__ds_scope, { Card });
 // components/content/Quote.jsx
 try { (() => {
 /**
- * Kloe Gaye — Quote
+ * Kloe Gaye - Quote
  * Editorial pull-quote / testimonial. Large serif with attribution.
  */
 
@@ -409,7 +409,7 @@ Object.assign(__ds_scope, { Quote });
 // components/content/SectionHeader.jsx
 try { (() => {
 /**
- * Kloe Gaye — SectionHeader
+ * Kloe Gaye - SectionHeader
  * Kicker + display title (+ optional lede & action). The editorial section intro.
  */
 
@@ -476,7 +476,7 @@ Object.assign(__ds_scope, { SectionHeader });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Stat
+ * Kloe Gaye - Stat
  * Big editorial metric: serif number + label. For results / proof sections.
  */
 
@@ -529,7 +529,7 @@ Object.assign(__ds_scope, { Stat });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — Button
+ * Kloe Gaye - Button
  * Editorial pill / outline / ghost / link button with optional icons.
  */
 
@@ -626,7 +626,7 @@ Object.assign(__ds_scope, { Button });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — IconButton
+ * Kloe Gaye - IconButton
  * Square/round icon-only button. Pass a Lucide (or any) SVG node as children.
  */
 
@@ -690,7 +690,7 @@ Object.assign(__ds_scope, { IconButton });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — form field primitives: Field (label wrapper), Input, Textarea, Select.
+ * Kloe Gaye - form field primitives: Field (label wrapper), Input, Textarea, Select.
  * Underline-led editorial inputs.
  */
 
@@ -808,9 +808,9 @@ Object.assign(__ds_scope, { Field, Input, Textarea, Select });
 // components/media/AudioPlayer.jsx
 try { (() => {
 /**
- * Kloe Gaye — AudioPlayer
+ * Kloe Gaye - AudioPlayer
  * Podcast episode player: play/pause, waveform scrubber, time. Self-contained
- * demo timing (no real audio) — pass `onSeek`/control externally for real use.
+ * demo timing (no real audio) - pass `onSeek`/control externally for real use.
  */
 
 const CSS = `
@@ -910,7 +910,7 @@ Object.assign(__ds_scope, { AudioPlayer });
 // components/media/Marquee.jsx
 try { (() => {
 /**
- * Kloe Gaye — Marquee
+ * Kloe Gaye - Marquee
  * Infinite horizontal ticker. Cinematic rolling headline of words/items.
  */
 
@@ -969,7 +969,7 @@ Object.assign(__ds_scope, { Marquee });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — PlayButton
+ * Kloe Gaye - PlayButton
  * Large circular play/pause control with optional label, for video & audio.
  */
 
@@ -1044,7 +1044,7 @@ Object.assign(__ds_scope, { PlayButton });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — ReelCard
+ * Kloe Gaye - ReelCard
  * Vertical 9:16 short-form video card with play overlay and view metric.
  */
 
@@ -1122,7 +1122,7 @@ Object.assign(__ds_scope, { ReelCard });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
- * Kloe Gaye — WorkCard
+ * Kloe Gaye - WorkCard
  * Portfolio / case-study card: image, kicker meta, serif title, tags.
  */
 
@@ -1216,7 +1216,7 @@ Object.assign(__ds_scope, { WorkCard });
 
 // ui_kits/podcast/EpisodeHero.jsx
 try { (() => {
-// Kloe Gaye podcast — episode hero
+// Kloe Gaye podcast - episode hero
 const {
   Kicker,
   Tag,
@@ -1352,7 +1352,7 @@ Object.assign(window, {
 
 // ui_kits/podcast/EpisodeList.jsx
 try { (() => {
-// Kloe Gaye podcast — more episodes list
+// Kloe Gaye podcast - more episodes list
 const {
   SectionHeader,
   Button
@@ -1512,7 +1512,7 @@ Object.assign(window, {
 
 // ui_kits/podcast/ShowNotes.jsx
 try { (() => {
-// Kloe Gaye podcast — show notes, chapters, guest, subscribe
+// Kloe Gaye podcast - show notes, chapters, guest, subscribe
 const {
   SectionHeader,
   Card,
@@ -1697,7 +1697,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/About.jsx
 try { (() => {
-// Kloe Gaye portfolio — about + testimonial
+// Kloe Gaye portfolio - about + testimonial
 const {
   Kicker,
   Quote,
@@ -1807,7 +1807,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/Footer.jsx
 try { (() => {
-// Kloe Gaye portfolio — contact CTA + footer
+// Kloe Gaye portfolio - contact CTA + footer
 const {
   Button,
   Kicker,
@@ -1982,7 +1982,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/Hero.jsx
 try { (() => {
-// Kloe Gaye portfolio — hero
+// Kloe Gaye portfolio - hero
 const {
   Button,
   Kicker,
@@ -2144,7 +2144,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/Nav.jsx
 try { (() => {
-// Kloe Gaye portfolio — sticky navigation
+// Kloe Gaye portfolio - sticky navigation
 const {
   Button
 } = window.KloeGayeDesignSystem_152bdb;
@@ -2225,7 +2225,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/Services.jsx
 try { (() => {
-// Kloe Gaye portfolio — services (accordion)
+// Kloe Gaye portfolio - services (accordion)
 const {
   SectionHeader,
   Accordion
@@ -2233,11 +2233,11 @@ const {
 const SERVICES = [{
   index: '01',
   title: 'Social media strategy',
-  body: 'Channel plans, positioning, hooks and posting calendars — plus the weekly reporting that proves it&rsquo;s working.'
+  body: 'Channel plans, positioning, hooks and posting calendars - plus the weekly reporting that proves it&rsquo;s working.'
 }, {
   index: '02',
   title: 'Short & long-form video',
-  body: 'Reels, shorts and YouTube. Scripted, shot-listed, edited and scheduled — a steady drumbeat, not one-off hits.'
+  body: 'Reels, shorts and YouTube. Scripted, shot-listed, edited and scheduled - a steady drumbeat, not one-off hits.'
 }, {
   index: '03',
   title: 'Podcast production',
@@ -2249,7 +2249,7 @@ const SERVICES = [{
 }, {
   index: '05',
   title: 'Marketing data & analytics',
-  body: 'Dashboards that track what matters — reach, saves, retention, conversion — and the read on what to do next.'
+  body: 'Dashboards that track what matters - reach, saves, retention, conversion - and the read on what to do next.'
 }, {
   index: '06',
   title: 'Teams & schedules',
@@ -2299,7 +2299,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/Statement.jsx
 try { (() => {
-// Kloe Gaye portfolio — cinematic statement band (dark) + results
+// Kloe Gaye portfolio - cinematic statement band (dark) + results
 const {
   Stat,
   Kicker,
@@ -2389,7 +2389,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/WorkGrid.jsx
 try { (() => {
-// Kloe Gaye portfolio — selected work grid with filters
+// Kloe Gaye portfolio - selected work grid with filters
 const {
   SectionHeader,
   Tag,
@@ -2488,7 +2488,7 @@ Object.assign(window, {
 
 // ui_kits/portfolio/icons.jsx
 try { (() => {
-// Kloe Gaye portfolio — shared inline icons + helpers
+// Kloe Gaye portfolio - shared inline icons + helpers
 const Icon = {
   instagram: /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 24 24",
@@ -2581,7 +2581,7 @@ Object.assign(window, {
 
 // ui_kits/social/ReelGrid.jsx
 try { (() => {
-// Kloe Gaye social — reel showcase grid with platform filter
+// Kloe Gaye social - reel showcase grid with platform filter
 const {
   ReelCard,
   Tag
@@ -2682,7 +2682,7 @@ Object.assign(window, {
 
 // ui_kits/social/SocialHero.jsx
 try { (() => {
-// Kloe Gaye social — hero
+// Kloe Gaye social - hero
 const {
   Kicker,
   Tag,
@@ -2765,7 +2765,7 @@ Object.assign(window, {
 
 // ui_kits/social/Spotlight.jsx
 try { (() => {
-// Kloe Gaye social — campaign spotlight + CTA
+// Kloe Gaye social - campaign spotlight + CTA
 const {
   SectionHeader,
   Stat,

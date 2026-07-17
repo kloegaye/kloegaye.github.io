@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio — services (accordion)
+// Kloe Gaye portfolio - services (accordion)
 const { SectionHeader } = window.KloeGayeDesignSystem_152bdb;
 
 const SERVICES = [

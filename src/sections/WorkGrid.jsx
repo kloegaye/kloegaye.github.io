@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio — selected work grid with filters
+// Kloe Gaye portfolio - selected work grid with filters
 const { SectionHeader, Tag, WorkCard, Button } = window.KloeGayeDesignSystem_152bdb;
 
 // Real programs from Kloe's CV. The UGC card uses a real still from the

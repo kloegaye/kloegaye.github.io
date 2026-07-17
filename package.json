@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Kloe Gaye — Head of Content portfolio. Static site built with the Kloe Gaye design system.",
+  "description": "Kloe Gaye - Head of Content portfolio. Static site built with the Kloe Gaye design system.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
