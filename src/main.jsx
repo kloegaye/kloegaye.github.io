@@ -15,12 +15,13 @@ import './sections/icons.jsx';
 import './sections/Nav.jsx';
 import './sections/Hero.jsx';
 import './sections/WorkGrid.jsx';
+import './sections/Podcast.jsx';
 import './sections/Services.jsx';
 import './sections/Statement.jsx';
 import './sections/About.jsx';
 import './sections/Footer.jsx';
 
-const { Nav, Hero, WorkGrid, Services, Statement, About, Footer } = window;
+const { Nav, Hero, WorkGrid, Podcast, Services, Statement, About, Footer } = window;
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Nav />
       <Hero />
       <WorkGrid />
+      <Podcast />
       <Services />
       <Statement />
       <About />

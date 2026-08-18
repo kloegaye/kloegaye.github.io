@@ -44,6 +44,27 @@ html {
   transition: grid-template-rows 0.34s var(--ease-inout, ease);
 }
 
+/* podcast band - cover art link */
+.kgp-podcast-cover {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--divider);
+}
+.kgp-podcast-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+.kgp-podcast-cover:hover img { transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) {
+  .kgp-podcast-cover img { transition: none; }
+  .kgp-podcast-cover:hover img { transform: none; }
+}
+
 /* contact social buttons */
 .kgp-social {
   transition: background .24s var(--ease-out), color .24s var(--ease-out), border-color .24s var(--ease-out);
@@ -69,9 +90,11 @@ html {
 @media (max-width: 900px) {
   .kgp-hero-grid,
   .kgp-work-grid,
+  .kgp-podcast-grid,
   .kgp-services-grid,
   .kgp-about-grid,
   .kgp-contact-grid { grid-template-columns: 1fr !important; }
   .kgp-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .kgp-hero-grid > div:last-child { display: none; }
+  .kgp-podcast-cover { max-width: 320px; }
 }
