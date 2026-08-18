@@ -17,7 +17,7 @@ function Podcast() {
           </a>
           <div>
             <SectionHeader kicker="The Podcast" title={<>My own show, <em>Politis</em></>}
-              lede="The show where we talk about the language of politics and the politics of language. Booked, recorded, edited and shipped by me — the same engine I run for clients." />
+              lede="The show where we talk about the language of politics and the politics of language. Booked, recorded, edited and shipped by me." />
             <div style={{ marginTop: 32 }}>
               <Button variant="secondary" arrow href={SPOTIFY_URL} target="_blank" rel="noopener">
                 Listen on Spotify
