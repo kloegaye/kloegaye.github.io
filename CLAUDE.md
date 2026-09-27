@@ -23,6 +23,22 @@ Kloe owns it and works on it with you directly. **Kloe is not technical.**
 - **Keep Kloe posted briefly.** Short updates while you work; a clear "done, here's what changed"
   at the end.
 
+## First-time setup (do this yourself, silently)
+
+At the start of a session, check the tools exist (`command -v git gh bun`) and install any that are
+missing, without asking Kloe:
+
+- **git:** if missing, run `xcode-select --install` and tell Kloe to click "Install" in the popup.
+- **bun:** `curl -fsSL https://bun.sh/install | bash` (no admin password needed), then use
+  `~/.bun/bin/bun` or open a new shell.
+- **gh:** `brew install gh` if Homebrew exists. Otherwise download the latest macOS zip from
+  https://github.com/cli/cli/releases, unpack it to `~/.local/gh`, and use `~/.local/gh/bin/gh`
+  (no admin password needed). Don't install Homebrew just for this, because it needs Kloe's password.
+- Then run `bun install` in the project.
+- **Login:** if `gh auth status` fails, tell Kloe to type `! gh auth login` (use the full path
+  if gh isn't on PATH) and walk them through it: GitHub.com → HTTPS → log in with a web browser.
+  Then run `gh auth setup-git`. This is the one step only Kloe can do.
+
 ## Publishing: always automatic
 
 Every change Kloe asks for should end up live without Kloe doing anything technical. After making
@@ -44,9 +60,8 @@ a change:
 If the deploy fails, fix it and redeploy yourself. Only tell Kloe if it can't be fixed, and then
 in plain words. If something already live is broken, revert first, then fix.
 
-If `git push` or `gh` fails because of login/permissions, tell Kloe to type `! gh auth login`
-and walk them through the prompts (GitHub.com, HTTPS, log in with a web browser), then run
-`gh auth setup-git` and retry.
+If `git push` or `gh` fails because of login/permissions, redo the login step from First-time
+setup and retry.
 
 Kloe can always say "undo that" and you should revert the last change and republish.
 

@@ -18,49 +18,53 @@ Live: https://kloegaye.github.io/
 JSX is pre-compiled by Vite with the **classic runtime** (`React.createElement`),
 so there is no in-browser Babel.
 
+## Working on the site
+
+Kloe edits this site by asking Claude Code in plain language. `CLAUDE.md` tells
+Claude how: it sets up the tools, makes the change, publishes it, and confirms
+when it's live. No technical steps needed.
+
 ## Project layout
 
 ```
-index.html                 Vite entry; loads React + DS bundle (globals), then src/main.jsx
+index.html                 main page; loads React + DS bundle (globals), then src/main.jsx
+ugc.html                   hidden, unlinked UGC-creator page (/ugc.html) -> src/ugc.jsx
 src/
   main.jsx                 imports sections, renders <App/> into #root
   app.css                  page-level styles (nav underline, dark form, responsive)
+  ugc.jsx, ugc.css         UGC page
   ds/
     styles.css             design-system entry (@imports tokens)
     tokens/*.css           colors, typography, layout, fonts, base
-  sections/                Nav, Hero, WorkGrid, Services, Statement, About, Footer, icons
+  sections/                Nav, Hero, WorkGrid, Podcast, Services, Statement, About, Footer, icons
 public/
   _ds_bundle.js            compiled design-system components (window global)
   vendor/                  React + ReactDOM UMD (self-hosted)
-  .nojekyll
+  images/                  photos, work thumbnails, social-share images
+  reels/                   UGC videos + poster frames
 .github/workflows/deploy.yml   builds with Vite and publishes dist/ to Pages
+CLAUDE.md                  instructions for Claude Code
 ```
 
 ## Develop
 
+Uses [bun](https://bun.sh).
+
 ```bash
-npm install
-npm run dev        # local dev server
-npm run build      # production build -> dist/
-npm run preview    # serve the production build locally
+bun install
+bun run dev        # local dev server
+bun run build      # production build -> dist/
+bun run preview    # serve the production build locally
 ```
 
 ## Deploy
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with Vite
-and publishes `dist/` to GitHub Pages.
+and publishes `dist/` to GitHub Pages (Settings -> Pages -> Source: GitHub Actions).
+Takes a minute or two; track with `gh run watch`.
 
-**One-time setup:** in the repo, go to **Settings → Pages → Build and deployment →
-Source** and select **GitHub Actions**.
+## Notes
 
-## Notes / placeholders to replace
-
-The content is the design system's placeholder portfolio - swap for Kloe's real
-material:
-
-- **Imagery** - currently `picsum.photos` seeds (Hero portrait, About, WorkCard
-  images). Replace with real photos/work.
-- **Copy & case studies** - `src/sections/WorkGrid.jsx`, `Services.jsx`, `About.jsx`.
-- **Contact** - `hello@kloegaye.com` and the social links (`#`) in `Footer.jsx`.
-- **Fonts** - Lexend + Space Mono load from Google Fonts CDN
-  (`src/ds/tokens/fonts.css`); self-host for production/offline if desired.
+- Fonts (Lexend, Space Mono) load from Google Fonts (`src/ds/tokens/fonts.css`).
+- New pages need their own HTML file plus an entry in `vite.config.js`
+  `rollupOptions.input`.
