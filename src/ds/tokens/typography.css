@@ -1,14 +1,14 @@
 /* ============================================================
    Kloe Gaye - Typography tokens
-   Display: Lexend (high-readability sans, heavier weights)
-   Body/UI: Lexend (high-readability sans)
+   Display: Aileron (neo-grotesque sans, heavier weights)
+   Body/UI: Aileron
    Mono:    Space Mono (kickers, labels, indices)
    ============================================================ */
 
 :root {
   /* ---- Families ---- */
-  --font-display: "Lexend", system-ui, -apple-system, sans-serif;
-  --font-sans:    "Lexend", system-ui, -apple-system, sans-serif;
+  --font-display: "Aileron", "Helvetica Neue", Helvetica, Arial, system-ui, -apple-system, sans-serif;
+  --font-sans:    "Aileron", "Helvetica Neue", Helvetica, Arial, system-ui, -apple-system, sans-serif;
   --font-mono:    "Space Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* ---- Weights ---- */

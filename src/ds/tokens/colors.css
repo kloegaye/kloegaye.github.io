@@ -2,8 +2,8 @@
    Kloe Gaye - Color tokens
    Palette: "Midnight & Signal"
    Dark cinematic ground (like the reference), warm-free cool
-   near-blacks, near-white text, and a bright electric blue
-   "signal" accent (#00BCF5) for the pop.
+   near-blacks, near-white text, and a sunny yellow
+   "signal" accent (#FFDE59) for the pop.
    ============================================================ */
 
 :root {
@@ -18,15 +18,15 @@
   --white:     #FFFFFF;
   --porcelain: #EEF3F6;   /* lightest - text, light chips on dark */
 
-  /* ---- Brand accent - electric blue signal ---- */
-  --signal:        #00BCF5;   /* primary accent */
-  --signal-bright: #5AD2FA;   /* hover / lighter on dark */
-  --signal-deep:   #0090C4;   /* pressed */
-  --signal-soft:   #08303C;   /* tinted blue panel surface */
+  /* ---- Brand accent - sunny yellow signal ---- */
+  --signal:        #FFDE59;   /* primary accent */
+  --signal-bright: #FFE88A;   /* hover / lighter on dark */
+  --signal-deep:   #E6C33A;   /* pressed */
+  --signal-soft:   #2B2610;   /* tinted yellow panel surface */
   --steel:         #3E6E8E;   /* secondary support */
   --steel-soft:    #122A36;   /* tinted steel surface */
 
-  /* legacy aliases (kept so older refs resolve to the new blue) */
+  /* legacy aliases (kept so older refs resolve to the accent) */
   --poppy:      var(--signal);
   --poppy-deep: var(--signal-deep);
   --poppy-soft: var(--signal-soft);
@@ -44,7 +44,7 @@
   --success: #46C98A;
   --warning: #E2A23C;
   --danger:  #F0644B;
-  --info:    #00BCF5;
+  --info:    #FFDE59;
 
   /* ============================================================
      Semantic aliases - prefer these in components & layouts
@@ -66,18 +66,18 @@
   --accent:        var(--signal);
   --accent-hover:  var(--signal-bright);
   --accent-soft:   var(--signal-soft);
-  --on-accent:     #04222C;        /* dark text on bright blue */
+  --on-accent:     #1A1604;        /* dark text on bright yellow */
 
   --accent-2:      var(--steel);
   --accent-2-soft: var(--steel-soft);
 
-  /* Feature / contrast bands (deeper, blue-black) */
-  --bg-invert:          #06171D;
+  /* Feature / contrast bands (deeper, near-black) */
+  --bg-invert:          #12110C;
   --surface-invert:     #10171D;
   --text-invert:        #EEF3F6;
   --text-invert-muted:  #93A0AB;
   --border-invert:      rgba(255, 255, 255, 0.13);
 
   /* Focus ring */
-  --ring: rgba(0, 188, 245, 0.45);
+  --ring: rgba(255, 222, 89, 0.45);
 }
