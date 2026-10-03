@@ -1,0 +1,133 @@
+/* ============================================================
+   Kloe Gaye - CV page styles
+   (Base tokens, components and shared helpers come from ds/ and app.css.)
+   ============================================================ */
+
+.kgp-cv-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--divider);
+}
+.kgp-cv-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  margin: 20px 0 0;
+}
+.kgp-cv-name em { font-style: italic; font-weight: 500; color: var(--accent); }
+.kgp-cv-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+}
+.kgp-cv-contact a { color: var(--text-muted); text-decoration: none; }
+.kgp-cv-contact a:hover { color: var(--accent); }
+
+/* label column + content column */
+.kgp-cv-block {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-bottom: 1px solid var(--divider);
+}
+.kgp-cv-label { padding-top: 4px; }
+
+.kgp-cv-lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin: 0;
+}
+
+.kgp-cv-org + .kgp-cv-org { margin-top: 2.5rem; }
+.kgp-cv-orgname {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+  margin: 0;
+}
+.kgp-cv-orgname span { font-style: italic; font-weight: 500; color: var(--text-muted); font-size: 0.75em; }
+.kgp-cv-orglede { margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: var(--text-muted); }
+
+.kgp-cv-role { margin-top: 1.4rem; }
+.kgp-cv-role:first-child { margin-top: 0; }
+.kgp-cv-org .kgp-cv-role:first-of-type { margin-top: 1.4rem; }
+.kgp-cv-role h3,
+.kgp-cv-rolehead h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+.kgp-cv-rolehead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px 16px;
+  flex-wrap: wrap;
+}
+.kgp-cv-dates {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+.kgp-cv-points { margin-top: 12px; }
+
+.kgp-cv-skill + .kgp-cv-skill { margin-top: 1.25rem; }
+.kgp-cv-sublabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0 0 10px;
+}
+.kgp-cv-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.kgp-cv-end {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+@media (max-width: 760px) {
+  .kgp-cv-block { grid-template-columns: 1fr; gap: 1rem; }
+  .kgp-cv-headtag { display: none; }
+}
+
+/* "Save as PDF" prints a clean, light, paper version */
+@media print {
+  @page { margin: 14mm; }
+  html, body, #root { background: #fff !important; }
+  body { color: #111; }
+  .kgp-cv-noprint { display: none !important; }
+  .kgp-cv-top, .kgp-cv-block { border-color: #ddd; }
+  .kgp-cv-top { padding-top: 0; }
+  .kgp-cv-name em { color: #111; }
+  .kgp-cv-name, .kgp-cv-orgname, .kgp-cv-role h3, .kgp-cv-rolehead h3, .kgp-svc-wins li { color: #111 !important; }
+  .kgp-cv-lede, .kgp-cv-orglede, .kgp-cv-orgname span, .kgp-cv-contact a { color: #444 !important; }
+  .kgp-cv-dates, .kgp-cv-sublabel { color: #666 !important; }
+  .kgp-svc-wins li::before { background: #111; }
+  .kgp-cv-role, .kgp-cv-skill { break-inside: avoid; }
+  .kgp-cv-orgname { break-after: avoid; }
+  .kgp-cv-block { padding: 1.25rem 0; }
+  .kgp-cv-lede { font-size: 14px; }
+  .kgp-svc-wins li { font-size: 13px; }
+  .kgp-cv-block { grid-template-columns: 150px minmax(0, 1fr); }
+}
