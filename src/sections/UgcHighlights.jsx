@@ -73,6 +73,14 @@ function HighlightReel({ brand, driveId, fit = false, showTitle = true }) {
   );
 }
 
+function UgcProgramButton() {
+  return (
+    <div style={{ marginTop: 32 }}>
+      <Button arrow href="/ugc">The UGC program in depth</Button>
+    </div>
+  );
+}
+
 function UgcHighlights() {
   return (
     <section id="ugc" style={{ paddingBlock: 'var(--section-y)' }}>
@@ -81,9 +89,7 @@ function UgcHighlights() {
         <div className="kgp-highlight-grid">
           {HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
         </div>
-        <div style={{ marginTop: 32 }}>
-          <Button variant="secondary" arrow href="/ugc">The UGC program in depth</Button>
-        </div>
+        <UgcProgramButton />
       </div>
       <div style={{ maxWidth: 'var(--container)', margin: 'var(--section-y) auto 0', padding: '0 var(--gutter)' }}>
         <SectionHeader kicker="UGC ads" title={<>Capture your brand&rsquo;s <em>audience</em></>}
@@ -91,6 +97,7 @@ function UgcHighlights() {
         <div className="kgp-highlight-row">
           {REVENUE_ADS.map((h) => <HighlightReel key={h.driveId} {...h} fit showTitle={false} />)}
         </div>
+        <UgcProgramButton />
       </div>
     </section>
   );
