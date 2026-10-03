@@ -7,7 +7,7 @@ function Hero() {
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.25fr 0.9fr', gap: 'clamp(2rem,5vw,5rem)', alignItems: 'center', paddingBlock: 'clamp(2rem,5vw,4.5rem)' }} className="kgp-hero-grid">
           <div>
-            <Kicker rule index="01 / 04">Head of Content &middot; Strategy</Kicker>
+            <Kicker rule index="01 / 04">Head of Social Media &middot; Content Strategy Lead</Kicker>
             <h1 style={{
               fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '-0.03em',
               lineHeight: 0.98, fontSize: 'clamp(3.25rem, 7.5vw, 6.5rem)', margin: '22px 0 0',
