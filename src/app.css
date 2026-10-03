@@ -144,7 +144,7 @@ html {
   .kgp-recs-grid,
   .kgp-contact-grid { grid-template-columns: 1fr !important; }
   .kgp-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  .kgp-hero-grid > div:last-child { display: none; }
+  .kgp-hero-grid > div:last-child { width: 100%; max-width: 340px; margin-inline: auto; }
   .kgp-podcast-cover { max-width: 320px; }
   .kgp-services-grid > div:first-child { position: static !important; }
 }
@@ -224,3 +224,14 @@ html {
 /* recommendation names link to LinkedIn */
 .kgp-rec-link { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out); }
 .kgp-rec-link:hover, .kgp-rec-link:focus-visible { color: var(--accent); border-bottom-color: currentColor; }
+
+/* hero: click-to-play Politis intro video (extends the ds .kg-reel card) */
+.kgp-hero-video { aspect-ratio: 9 / 16; width: 100%; cursor: pointer; }
+.kgp-hero-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kgp-hero-video .kg-reel__play { transform: scale(1); }
+.kgp-hero-video .kg-reel__scrim,
+.kgp-hero-video .kg-reel__play,
+.kgp-hero-video .kg-reel__top { transition: opacity var(--dur-base, 0.25s) ease; }
+.kgp-hero-video.is-playing .kg-reel__scrim,
+.kgp-hero-video.is-playing .kg-reel__play,
+.kgp-hero-video.is-playing .kg-reel__top { opacity: 0; pointer-events: none; }

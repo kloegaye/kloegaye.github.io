@@ -1,6 +1,45 @@
 // Kloe Gaye portfolio - hero
 const { Button, Kicker, Marquee, Badge } = window.KloeGayeDesignSystem_152bdb;
 
+/* Politis podcast intro: same look as the ds reel card, click to play with sound. */
+function HeroVideo() {
+  const ref = React.useRef(null);
+  const [playing, setPlaying] = React.useState(false);
+
+  const toggle = () => {
+    const v = ref.current;
+    if (!v) return;
+    if (v.paused) v.play(); else v.pause();
+  };
+
+  return (
+    <div
+      className={`kg-reel kgp-hero-video${playing ? ' is-playing' : ''}`}
+      role="button" tabIndex={0}
+      aria-label={playing ? 'Pause the Politis podcast intro' : 'Play the Politis podcast intro'}
+      onClick={toggle}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }}
+    >
+      <video
+        ref={ref}
+        src="/reels/politis-intro.mp4"
+        poster="/reels/politis-intro.jpg"
+        preload="metadata" playsInline
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={() => { setPlaying(false); if (ref.current) ref.current.currentTime = 0; }}
+      />
+      <div className="kg-reel__scrim" />
+      <div className="kg-reel__top">
+        <span className="kg-reel__platform">Podcast &middot; Politis</span>
+      </div>
+      <div className="kg-reel__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+      </div>
+    </div>
+  );
+}
+
 function Hero() {
   return (
     <section id="top" style={{ paddingTop: 'clamp(2rem,5vw,4rem)' }}>
@@ -29,9 +68,7 @@ function Hero() {
             </div>
           </div>
           <div style={{ position: 'relative' }}>
-            <div style={{ position: 'relative' }}>
-              <img src="/images/ugc-hero.png" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ display: 'block', width: '100%', height: 'auto', filter: 'saturate(1.02) contrast(1.02)' }} />
-            </div>
+            <HeroVideo />
             <div style={{
               position: 'absolute', bottom: -18, left: -18, background: 'var(--surface)',
               border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '14px 18px',
