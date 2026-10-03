@@ -9,11 +9,11 @@ function Statement() {
           <Kicker tone="invert" rule>The way I work</Kicker>
           <p style={{
             fontFamily: 'var(--font-display)', fontWeight: 500, letterSpacing: '-0.02em',
-            lineHeight: 1.14, fontSize: 'clamp(1.9rem, 4.2vw, 3.4rem)', maxWidth: '20ch',
+            lineHeight: 1.14, fontSize: 'clamp(1.9rem, 4.2vw, 3.4rem)', maxWidth: '24ch',
             margin: '24px 0 0', color: 'var(--text-invert)', textWrap: 'balance',
           }}>
-            Great content doesn&rsquo;t shout. It <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>shows up</em>:
-            on time, on brand, every single week.
+            Great content isn&rsquo;t made. It is researched, planned, produced, and analysed
+            {' '}<em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>again and again</em> into a repeatable format.
           </p>
           <div style={{
             display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1.5rem,3vw,3rem)',
