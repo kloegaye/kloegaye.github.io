@@ -8,7 +8,7 @@ function About() {
         <div style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 'clamp(2rem,5vw,5rem)', alignItems: 'center' }} className="kgp-about-grid">
           <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
             <div style={{ width: 'min(420px, 100%)', aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', background: 'var(--surface-sunken)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-md)' }}>
-              <img src="/images/kloe.jpg" alt="Kloe Gaye" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+              <img src="/images/kloe.jpg" alt="Headshot of Kloe Gaye smiling" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
             </div>
           </div>
           <div>
@@ -17,15 +17,22 @@ function About() {
               I&rsquo;ve been the whole content team, so I know how to <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>build</em> one.
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 26, fontSize: 17, lineHeight: 1.65, color: 'var(--text-muted)', maxWidth: '52ch' }}>
-              <p>For seven years I&rsquo;ve led content for founder-led and DTC brands: setting the
-                strategy, shooting and editing the work, producing the podcast, and reporting on
-                what actually moved the numbers.</p>
-              <p>I hire and train freelancers, own the calendar, and keep the whole engine running
-                week after week. If you want a Head of Content who can both think and ship, that&rsquo;s the job I love.</p>
+              <p>Hi, I&rsquo;m Kloe! I&rsquo;ve spent the last seven years making content for all
+                kinds of brands, from the ICRC&rsquo;s global channels to small businesses in Australia
+                and consumer brands in Singapore. It all started with broadcast training at CNN
+                Philippines, and I&rsquo;ve loved telling stories on camera ever since.</p>
+              <p>These days I lead content at Ling, a language-learning app. I joined as a content
+                creator and got promoted twice in two years, so now I look after our YouTube,
+                Facebook and Instagram, run a small team of freelance creators, and produce our
+                Tagalog Tea Time podcast. Along the way, the video ads I&rsquo;ve made have brought in
+                over $344K in revenue.</p>
+              <p>I&rsquo;m happiest when I get to do the whole thing: dream up the strategy, film it,
+                edit it, then dig into the numbers to see what worked. And when I&rsquo;m off the clock,
+                you&rsquo;ll find me hosting POLITIS, my podcast about the language of politics.</p>
             </div>
             <div style={{ display: 'flex', gap: 10, marginTop: 28, flexWrap: 'wrap' }}>
-              <Tag>7 yrs experience</Tag>
-              <Tag>DTC &amp; founder-led</Tag>
+              <Tag>7 yrs in social</Tag>
+              <Tag>On camera + behind it</Tag>
               <Tag>Remote / hybrid</Tag>
             </div>
           </div>
