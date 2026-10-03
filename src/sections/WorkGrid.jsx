@@ -16,7 +16,7 @@ const WORK = [
     href: 'https://www.instagram.com/ling_app/', external: true,
   },
   {
-    id: 3, cat: 'Social', image: '/images/work-icrc.jpg', category: 'Social · Nonprofit', year: '2021–23',
+    id: 3, cat: 'Social', image: '/images/work-icrc-tiktok.jpg', category: 'Social · Nonprofit', year: '2021–23',
     title: <>The ICRC&rsquo;s global <em>TikTok</em> task force</>, tags: ['TikTok', 'Team training', 'Global campaigns'],
     href: 'https://www.tiktok.com/@icrc', external: true,
   },
