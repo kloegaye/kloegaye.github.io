@@ -85,7 +85,15 @@ function UgcHighlights() {
           <Button variant="secondary" arrow href="/ugc">The UGC program in depth</Button>
         </div>
       </div>
-      <div style={{ maxWidth: 'var(--container)', margin: 'var(--section-y) auto 0', padding: '0 var(--gutter)' }}>
+    </section>
+  );
+}
+
+// "Capture your brand's audience" - split out so Services can sit between.
+function UgcAds() {
+  return (
+    <section id="ugc-ads" style={{ paddingBlock: 'var(--section-y)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
         <SectionHeader kicker="UGC ads" title={<>Capture your brand&rsquo;s <em>audience</em></>}
           lede="UGC ads that earned 6-figure revenue in USD" />
         <div className="kgp-highlight-row">
@@ -96,4 +104,4 @@ function UgcHighlights() {
   );
 }
 
-Object.assign(window, { UgcHighlights });
+Object.assign(window, { UgcHighlights, UgcAds });
