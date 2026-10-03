@@ -1,4 +1,4 @@
-// Kloe Gaye portfolio - about + testimonial
+// Kloe Gaye portfolio - about + recommendations
 const { Kicker, Quote, Avatar, Tag, Card } = window.KloeGayeDesignSystem_152bdb;
 
 function About() {
@@ -37,8 +37,16 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
 
-        <div style={{ marginTop: 'clamp(3rem,6vw,5rem)', paddingTop: 'clamp(2.5rem,4vw,3.5rem)', borderTop: '1px solid var(--divider)' }}>
+function Recommendations() {
+  return (
+    <section id="recommendations" style={{ paddingBlock: 'var(--section-y)', borderTop: '1px solid var(--divider)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
+        <div>
           <div className="kgp-recs-grid">
             <Card pad="lg" className="kgp-rec">
               <Quote name={<a className="kgp-rec-link" href="https://www.linkedin.com/in/shaydavidovich87/" target="_blank" rel="noopener noreferrer">Shay Davidovich</a>} role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
@@ -65,4 +73,4 @@ function About() {
   );
 }
 
-Object.assign(window, { About });
+Object.assign(window, { About, Recommendations });

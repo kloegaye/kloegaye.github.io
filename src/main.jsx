@@ -22,7 +22,7 @@ import './sections/Statement.jsx';
 import './sections/About.jsx';
 import './sections/Footer.jsx';
 
-const { Nav, Hero, UgcHighlights, UgcAds, WorkGrid, Podcast, Services, Statement, About, Footer } = window;
+const { Nav, Hero, UgcHighlights, UgcAds, WorkGrid, Podcast, Services, Statement, About, Recommendations, Footer } = window;
 
 function App() {
   return (
@@ -32,9 +32,10 @@ function App() {
       <UgcHighlights />
       <UgcAds />
       <About />
+      <Podcast />
+      <Recommendations />
       <Services />
       <WorkGrid />
-      <Podcast />
       <Statement />
       <Footer />
     </React.Fragment>
