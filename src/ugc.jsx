@@ -222,8 +222,7 @@ function Reels() {
     <section id="reels" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={CONTAINER}>
         <SectionHeader kicker="Selected reels" title={<>Scroll-stopping <em>UGC</em></>}
-          lede="A curated set of the hooks and formats that performed best. Vertical, native, and built to be watched with the sound on."
-          action={<Button variant="link" arrow href="mailto:kloegayem@gmail.com">Request full reel</Button>} />
+          lede="A curated set of the hooks and formats that performed best. Vertical, native, and built to be watched with the sound on." />
         <div className="kgp-reel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1rem,2vw,1.75rem)', marginTop: 38 }}>
           {REELS.map((r) => (
             <VideoReel key={r.slug} {...r} />
