@@ -399,7 +399,7 @@ function Contact() {
       <div style={{ ...CONTAINER, textAlign: 'center' }}>
         <Kicker rule>Let&rsquo;s work</Kicker>
         <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.05, fontSize: 'clamp(2.4rem,5vw,4rem)', margin: '20px 0 0' }}>
-          Got a product that deserves<br /><em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>better</em> UGC?
+          Your brand that deserves<br /><em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>better</em> UGC.
         </h2>
         <p style={{ fontSize: 'clamp(1.05rem,1.5vw,1.2rem)', lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: '44ch', margin: '22px auto 0' }}>
           Send me the brief. I&rsquo;ll come back with hooks, formats and a shoot plan built to convert.
