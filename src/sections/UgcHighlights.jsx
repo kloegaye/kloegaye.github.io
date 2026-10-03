@@ -95,7 +95,7 @@ function UgcHighlights() {
   );
 }
 
-// "Capture your brand's audience" - split out so Services can sit between.
+// "Capture your brand's audience" - its own section (Services follows it).
 function UgcAds() {
   return (
     <section id="ugc-ads" style={{ paddingBlock: 'var(--section-y)' }}>

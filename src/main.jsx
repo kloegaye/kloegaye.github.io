@@ -30,8 +30,8 @@ function App() {
       <Nav />
       <Hero />
       <UgcHighlights />
-      <Services />
       <UgcAds />
+      <Services />
       <WorkGrid />
       <Podcast />
       <Statement />
