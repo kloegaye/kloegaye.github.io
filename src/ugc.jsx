@@ -120,7 +120,7 @@ function Results() {
         <div style={{ paddingBlock: 'var(--section-y)' }}>
           <Kicker tone="invert" rule>The numbers</Kicker>
           <p style={{ fontFamily: 'var(--font-display)', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.14, fontSize: 'clamp(1.9rem, 4.2vw, 3.4rem)', maxWidth: '22ch', margin: '24px 0 0', color: 'var(--text-invert)', textWrap: 'balance' }}>
-            I don&rsquo;t guess. I ship, <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>test</em>, and scale what converts.
+            There&rsquo;s no guessing here. I ship, <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>test</em>, and scale what converts.
           </p>
           <div className="kgp-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1.5rem,3vw,3rem)', marginTop: 'clamp(2.5rem,5vw,4.5rem)', paddingTop: 'clamp(2rem,4vw,3rem)', borderTop: '1px solid var(--border-invert)' }}>
             <Stat tone="invert" value="6" suffix="-figure" label="USD revenue driven via Meta Ads creatives" />
