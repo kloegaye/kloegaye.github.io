@@ -6,7 +6,7 @@ const { SectionHeader, Tag, WorkCard, Button } = window.KloeGayeDesignSystem_152
 // channels she ran. Non-UGC images are placeholders until Kloe supplies stills.
 const WORK = [
   {
-    id: 1, cat: 'Video', image: '/reels/thai-native.jpg', category: 'UGC · Paid social', year: '2025–26',
+    id: 1, cat: 'Video', image: '/images/work-ugc.jpg', category: 'UGC · Paid social', year: '2025–26',
     title: <>The UGC program that <em>converts</em></>, tags: ['Meta Ads', 'On-camera', '160 creatives'],
     href: '/ugc.html',
   },
@@ -42,7 +42,7 @@ function WorkGrid() {
             <Tag key={x} active={f === x} onClick={() => setF(x)}>{x}</Tag>
           ))}
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'clamp(1.5rem,3vw,3rem)', marginTop: 38 }} className="kgp-work-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 'clamp(1.25rem,2.5vw,2.25rem)', marginTop: 38 }} className="kgp-work-grid">
           {shown.map((w, i) => (
             <WorkCard key={w.id} image={w.image}
               index={String(i + 1).padStart(2, '0')} category={w.category} year={w.year}

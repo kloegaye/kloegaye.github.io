@@ -130,10 +130,14 @@ html {
 .kgp-rec .kg-quote { justify-content: space-between; width: 100%; }
 .kgp-rec .kg-quote__text { font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.45; text-wrap: pretty; }
 
+/* selected work: vertical thumbnails */
+.kgp-work-grid .kg-work__media { aspect-ratio: 3 / 4; }
+.kgp-work-grid .kg-work__title { font-size: clamp(1.2rem, 1.8vw, 1.5rem); }
+
 /* responsive */
 @media (max-width: 900px) {
+  .kgp-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   .kgp-hero-grid,
-  .kgp-work-grid,
   .kgp-podcast-grid,
   .kgp-services-grid,
   .kgp-about-grid,
