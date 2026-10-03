@@ -9,6 +9,14 @@ const HIGHLIGHTS = [
   { brand: 'Cafe Slow Hoi An', driveId: null },
 ];
 
+// Vertical (9:16) second row - shown on the UGC page under HIGHLIGHTS.
+const VERTICALS = [
+  { brand: 'Monsoon Tea One Nimman', driveId: '1g0T4SsKpj1UCFA7Xmpl_81t1lFraYd4D' },
+  { brand: 'Ge Cafe Da Nang', driveId: null },
+  { brand: 'Hello Cola', driveId: null },
+  { brand: 'Monsoon Tea Jing Jai', driveId: '1uqrLVHI5pQ2Hbcu1ioP6YOg8NNc0yXnj' },
+];
+
 // UGC ads that earned 6-figure revenue. Tiles keep each video's own shape
 // (read from the Drive thumbnail) instead of forcing 9:16.
 const REVENUE_ADS = [
@@ -95,6 +103,23 @@ function UgcHighlights() {
   );
 }
 
+// UGC page version: same section plus a second row of vertical videos.
+function UgcEssence() {
+  return (
+    <section id="ugc-highlights" style={{ paddingBlock: 'var(--section-y)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
+        <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>} />
+        <div className="kgp-highlight-grid">
+          {HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
+        </div>
+        <div className="kgp-highlight-grid kgp-highlight-grid--vertical">
+          {VERTICALS.map((h) => <HighlightReel key={h.brand} {...h} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // "Capture your brand's audience" - its own section (Services follows it).
 function UgcAds() {
   return (
@@ -111,4 +136,4 @@ function UgcAds() {
   );
 }
 
-Object.assign(window, { UgcHighlights, UgcAds });
+Object.assign(window, { UgcHighlights, UgcAds, UgcEssence });
