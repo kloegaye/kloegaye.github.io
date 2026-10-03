@@ -12,14 +12,15 @@ function Hero() {
               fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '-0.03em',
               lineHeight: 0.98, fontSize: 'clamp(3.25rem, 7.5vw, 6.5rem)', margin: '22px 0 0',
             }}>
-              Content that<br /><em style={{ fontStyle: 'italic', fontWeight: 500, color: 'var(--accent)' }}>moves</em> people.
+              Content people<br /><em style={{ fontStyle: 'italic', fontWeight: 500, color: 'var(--accent)' }}>remember</em>.
             </h1>
             <p style={{ fontSize: 'clamp(1.05rem,1.5vw,1.25rem)', lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: '44ch', marginTop: 28 }}>
               I&rsquo;m Kloe. I build and run content programs for brands who want to be
-              watched: strategy, short and long-form video, and podcasts that earn attention and keep it.
+              watched: strategy, UGC content, organic short and long-form video, and podcasts across
+              all the major platforms. Let&rsquo;s earn attention and, more importantly, keep it.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 36, flexWrap: 'wrap' }}>
-              <Button size="lg" arrow href="#work">View the work</Button>
+              <Button size="lg" arrow href="#work">My Portfolio</Button>
               <Button variant="ghost" arrow href="#about">More about me</Button>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 34 }}>
@@ -28,9 +29,8 @@ function Hero() {
             </div>
           </div>
           <div style={{ position: 'relative' }}>
-            <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-              <img src="/images/hero-podcast.jpg" alt="Kloe Gaye recording her podcast" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(37,28,30,0) 60%, rgba(37,28,30,0.25))' }} />
+            <div style={{ position: 'relative' }}>
+              <img src="/images/ugc-hero.png" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ display: 'block', width: '100%', height: 'auto', filter: 'saturate(1.02) contrast(1.02)' }} />
             </div>
             <div style={{
               position: 'absolute', bottom: -18, left: -18, background: 'var(--surface)',
