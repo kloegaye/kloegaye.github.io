@@ -15,10 +15,10 @@ function Footer() {
           <div>
             <Kicker tone="invert" rule>Contact</Kicker>
             <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '-0.03em', lineHeight: 1.0, fontSize: 'clamp(2.5rem,6vw,5rem)', margin: '20px 0 0', color: 'var(--text-invert)' }}>
-              Let&rsquo;s build your<br /><em style={{ fontStyle: 'italic', fontWeight: 500, color: 'var(--accent)' }}>content engine</em>.
+              Let&rsquo;s build your<br /><em style={{ fontStyle: 'italic', fontWeight: 500, color: 'var(--accent)' }}>content strategy</em> together.
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--text-invert-muted)', maxWidth: '40ch', marginTop: 24 }}>
-              Hiring a Head of Content? Tell me about the brand and the goal, and I&rsquo;ll reply within a day.
+              Tell me about the brand, the goal, and the vision. I&rsquo;ll tell you how to make them possible.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
               <a href="mailto:kloegayem@gmail.com" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.25rem,2.4vw,1.8rem)', color: 'var(--text-invert)', borderBottom: '1px solid var(--accent)', paddingBottom: 4 }}>
