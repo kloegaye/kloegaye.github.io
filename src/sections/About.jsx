@@ -41,7 +41,7 @@ function About() {
         <div style={{ marginTop: 'clamp(3rem,6vw,5rem)', paddingTop: 'clamp(2.5rem,4vw,3.5rem)', borderTop: '1px solid var(--divider)' }}>
           <div className="kgp-recs-grid">
             <Card pad="lg" className="kgp-rec">
-              <Quote name="Shay Davidovich" role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
+              <Quote name={<a className="kgp-rec-link" href="https://www.linkedin.com/in/shaydavidovich87/" target="_blank" rel="noopener noreferrer">Shay Davidovich</a>} role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
                 avatar={<Avatar src="/images/shay-davidovich.jpg" name="Shay Davidovich" size="sm" />}>
                 One of the most creative individuals I&rsquo;ve ever collaborated with&hellip; she went
                 beyond merely leading; she dedicated herself to training, guiding, and ensuring a rich
@@ -50,7 +50,7 @@ function About() {
               </Quote>
             </Card>
             <Card pad="lg" className="kgp-rec">
-              <Quote name="Nat D&aacute;vila Merlo" role="Content Marketing Manager at Ling"
+              <Quote name={<a className="kgp-rec-link" href="https://www.linkedin.com/in/davilanat/" target="_blank" rel="noopener noreferrer">Nat D&aacute;vila Merlo</a>} role="Senior to Kloe at Ling &middot; Content Marketing Manager"
                 avatar={<Avatar src="/images/nat-davila-merlo.jpg" name="Nat Dávila Merlo" size="sm" />}>
                 Kloe is incredibly curious and always looking for ways to improve. I really appreciated
                 how open she was to exploring new ideas, whether it was social media, AI search, or
