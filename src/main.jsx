@@ -31,11 +31,11 @@ function App() {
       <Hero />
       <UgcHighlights />
       <UgcAds />
+      <About />
       <Services />
       <WorkGrid />
       <Podcast />
       <Statement />
-      <About />
       <Footer />
     </React.Fragment>
   );
