@@ -102,12 +102,11 @@ html {
 /* highlighted UGC reels (homepage, under the hero marquee) */
 .kgp-highlight-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 300px));
-  justify-content: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem,2vw,1.75rem);
   margin-top: 38px;
 }
-.kgp-highlight { cursor: pointer; }
+.kg-reel.kgp-highlight { cursor: pointer; aspect-ratio: 4 / 3; }
 .kgp-highlight img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .kgp-highlight iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .kgp-highlight--soon {
@@ -123,7 +122,7 @@ html {
   .kgp-highlight-grid {
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: 72%;
+    grid-auto-columns: 85%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     margin-inline: calc(-1 * var(--gutter));
