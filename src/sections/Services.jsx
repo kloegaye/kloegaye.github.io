@@ -15,7 +15,7 @@ const SERVICES = [
   { index: '02', title: 'Short & long-form video',
     body: 'Reels, shorts and YouTube videos: scripted, shot, edited and scheduled.',
     wins: [
-      'Generated $344K+ in revenue from Meta Ads video creatives.',
+      'Generated multiple six-figure revenue in USD from Meta Ads video creatives.',
       'Run Ling’s YouTube and Facebook channels end to end: strategy, production, video SEO and reporting.',
       'Led the creator team behind the ICRC’s TikTok (@icrc) and YouTube channels.',
       'On camera and behind it: presenting, scriptwriting and editing.',
