@@ -98,3 +98,38 @@ html {
   .kgp-hero-grid > div:last-child { display: none; }
   .kgp-podcast-cover { max-width: 320px; }
 }
+
+/* highlighted UGC reels (homepage, under the hero marquee) */
+.kgp-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  justify-content: start;
+  gap: clamp(1rem,2vw,1.75rem);
+  margin-top: 38px;
+}
+.kgp-highlight { cursor: pointer; }
+.kgp-highlight img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kgp-highlight iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.kgp-highlight--soon {
+  cursor: default;
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+}
+.kgp-highlight--soon .kg-reel__platform { background: var(--surface); color: var(--text-muted); }
+.kgp-highlight--soon .kg-reel__title { color: var(--text); }
+.kgp-highlight--soon .kg-reel__stat { color: var(--text-faint); }
+@media (max-width: 760px) {
+  .kgp-highlight-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+    padding-bottom: 6px;
+  }
+  .kgp-highlight-grid > * { scroll-snap-align: start; }
+}
