@@ -345,7 +345,7 @@ function About() {
 
         <div style={{ maxWidth: 920, margin: '0 auto', paddingBottom: 'var(--section-y)' }}>
           <Quote align="center" name="Shay Davidovich" role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
-            avatar={<Avatar name="Shay Davidovich" size="sm" />}>
+            avatar={<Avatar src="/images/shay-davidovich.jpg" name="Shay Davidovich" size="sm" />}>
             One of the most creative individuals I&rsquo;ve ever collaborated with. Her ability to
             generate <em>fresh and compelling content ideas</em> is truly exceptional&hellip; Kloe not
             only stays on top of things but excels, showcasing an impressive ability to swiftly
