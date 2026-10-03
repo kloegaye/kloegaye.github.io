@@ -2,6 +2,7 @@
 const { SectionHeader, Button } = window.KloeGayeDesignSystem_152bdb;
 
 const SPOTIFY_URL = 'https://open.spotify.com/show/033LR0sDePGK4ooQQHcmMY';
+const YOUTUBE_URL = 'https://youtube.com/playlist?list=PLYTiZTRo_jY4';
 
 function Podcast() {
   return (
@@ -18,9 +19,12 @@ function Podcast() {
           <div>
             <SectionHeader kicker="The Podcast" title={<>My own show, <em>Politis</em></>}
               lede="The show where we talk about the language of politics and the politics of language. Booked, recorded, edited and shipped by me." />
-            <div style={{ marginTop: 32 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 32, flexWrap: 'wrap' }}>
               <Button variant="secondary" arrow href={SPOTIFY_URL} target="_blank" rel="noopener">
                 Listen on Spotify
+              </Button>
+              <Button variant="secondary" arrow href={YOUTUBE_URL} target="_blank" rel="noopener">
+                Watch on YouTube
               </Button>
             </div>
           </div>
