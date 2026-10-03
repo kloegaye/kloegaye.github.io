@@ -68,7 +68,7 @@ function Hero() {
           </div>
           <div style={{ position: 'relative' }}>
             <div style={{ position: 'relative' }}>
-              <img src="/images/ugc-hero.png" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ display: 'block', width: '100%', height: 'auto', filter: 'saturate(1.02) contrast(1.02)' }} />
+              <img src="/images/ugc-hero.jpg" alt="Kloe Gaye on camera in a Ling UGC ad" style={{ display: 'block', width: '100%', height: 'auto', filter: 'saturate(1.02) contrast(1.02)' }} />
             </div>
             <div style={{ position: 'absolute', bottom: -18, left: -18, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '14px 18px', boxShadow: 'var(--shadow-md)' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>6-figure</div>
