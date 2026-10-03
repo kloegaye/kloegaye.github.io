@@ -4,7 +4,7 @@ const { SectionHeader, Tag } = window.KloeGayeDesignSystem_152bdb;
 // `wins` and `tools` come from Kloe's CV - keep them factual.
 const SERVICES = [
   { index: '01', title: 'Social media strategy',
-    body: 'Channel plans, positioning, hooks and posting calendars, plus the weekly reporting that proves it’s working.',
+    body: 'Channel plans, positioning, hooks, posting calendars and weekly reporting.',
     wins: [
       'Own the organic strategy for Ling across Facebook, Instagram, YouTube, Threads and Spotify, covering 6+ brand profiles.',
       'Grew Ling’s main Instagram (@ling_app) by 150% through organic content.',
@@ -13,7 +13,7 @@ const SERVICES = [
     ],
     tools: ['Hootsuite', 'Vista Social', 'Canva', 'Claude'] },
   { index: '02', title: 'Short & long-form video',
-    body: 'Reels, shorts and YouTube. Scripted, shot-listed, edited and scheduled: a steady drumbeat, not one-off hits.',
+    body: 'Reels, shorts and YouTube videos: scripted, shot, edited and scheduled.',
     wins: [
       'Generated $344K+ in revenue from Meta Ads video creatives.',
       'Run Ling’s YouTube and Facebook channels end to end: strategy, production, video SEO and reporting.',
@@ -22,7 +22,7 @@ const SERVICES = [
     ],
     tools: ['CapCut', 'vidIQ', 'Canva'] },
   { index: '03', title: 'Podcast production',
-    body: 'The whole show: guest booking, run-of-show, edit, publish and clips. It ships every week without you chasing it.',
+    body: 'Guest booking, run-of-show, editing, publishing and clips.',
     wins: [
       'Created and produce Ling’s Tagalog Tea Time podcast on Spotify, from concept to publishing.',
       'Host of POLITIS, a podcast on the language of politics and the politics of language.',
@@ -30,7 +30,7 @@ const SERVICES = [
     ],
     tools: ['Spotify', 'CapCut', 'Canva'] },
   { index: '04', title: 'Content calendars',
-    body: 'One calendar across every channel, mapped to launches and goals, so nothing ships late or off-brand.',
+    body: 'One calendar across every channel, mapped to launches and goals.',
     wins: [
       'Plan and schedule content for 6+ brand profiles across five platforms at Ling.',
       'Planned, created and curated content for the ICRC’s global English-language pages.',
@@ -38,7 +38,7 @@ const SERVICES = [
     ],
     tools: ['Hootsuite', 'Vista Social', 'Claude'] },
   { index: '05', title: 'Marketing data & analytics',
-    body: 'Dashboards that track what matters: reach, saves, retention, conversion, and the read on what to do next.',
+    body: 'Dashboards that track reach, saves, retention and conversion.',
     wins: [
       'Ran App Store Optimization on iOS and Android, including custom store listings for the UK and Australia.',
       'Managed Apple Search Ads for the UK and Australian markets.',
@@ -46,7 +46,7 @@ const SERVICES = [
     ],
     tools: ['Amplitude', 'AppsFlyer', 'AppTweak', 'App Store Connect', 'Google Play Console', 'Apple Search Ads', 'vidIQ'] },
   { index: '06', title: 'Teams & schedules',
-    body: 'Hiring, training and managing freelancers and the production schedule, so the engine keeps running when you scale.',
+    body: 'Hiring, training and managing freelancers and the production schedule.',
     wins: [
       'Promoted twice in two years at Ling, from content creator to team lead.',
       'Lead a team of three freelance creators producing content for every Ling profile.',
