@@ -1,5 +1,5 @@
 // Kloe Gaye portfolio - highlighted UGC work (sits under the hero marquee)
-const { SectionHeader } = window.KloeGayeDesignSystem_152bdb;
+const { SectionHeader, Button } = window.KloeGayeDesignSystem_152bdb;
 
 // Videos play from Kloe's Google Drive (file must stay shared as "Anyone
 // with the link"). `driveId: null` renders a "coming soon" placeholder tile.
@@ -67,6 +67,9 @@ function UgcHighlights() {
         <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>} />
         <div className="kgp-highlight-grid">
           {HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
+        </div>
+        <div style={{ marginTop: 32 }}>
+          <Button variant="secondary" arrow href="/ugc">The UGC program in depth</Button>
         </div>
       </div>
     </section>
