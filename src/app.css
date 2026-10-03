@@ -124,6 +124,12 @@ html {
 .kgp-form .kg-input::placeholder,
 .kgp-form .kg-textarea::placeholder { color: var(--text-invert-muted); }
 
+/* recommendations */
+.kgp-recs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 2.5vw, 2rem); align-items: stretch; }
+.kgp-rec { display: flex; }
+.kgp-rec .kg-quote { justify-content: space-between; width: 100%; }
+.kgp-rec .kg-quote__text { font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.45; text-wrap: pretty; }
+
 /* responsive */
 @media (max-width: 900px) {
   .kgp-hero-grid,
@@ -131,6 +137,7 @@ html {
   .kgp-podcast-grid,
   .kgp-services-grid,
   .kgp-about-grid,
+  .kgp-recs-grid,
   .kgp-contact-grid { grid-template-columns: 1fr !important; }
   .kgp-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .kgp-hero-grid > div:last-child { display: none; }

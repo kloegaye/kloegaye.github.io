@@ -1,5 +1,5 @@
 // Kloe Gaye portfolio - about + testimonial
-const { Kicker, Quote, Avatar, Tag } = window.KloeGayeDesignSystem_152bdb;
+const { Kicker, Quote, Avatar, Tag, Card } = window.KloeGayeDesignSystem_152bdb;
 
 function About() {
   return (
@@ -39,14 +39,25 @@ function About() {
         </div>
 
         <div style={{ marginTop: 'clamp(3rem,6vw,5rem)', paddingTop: 'clamp(2.5rem,4vw,3.5rem)', borderTop: '1px solid var(--divider)' }}>
-          <div style={{ maxWidth: 920, margin: '0 auto', textAlign: 'center' }}>
-            <Quote align="center" name="Shay Davidovich" role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
-              avatar={<Avatar src="/images/shay-davidovich.jpg" name="Shay Davidovich" size="sm" />}>
-              One of the most creative individuals I&rsquo;ve ever collaborated with&hellip; she went
-              beyond merely leading; she dedicated herself to training, guiding, and ensuring a rich
-              tapestry of content. Her contributions, especially in the dynamic world of social media,
-              have been <em>instrumental</em> in our team&rsquo;s success.
-            </Quote>
+          <div className="kgp-recs-grid">
+            <Card pad="lg" className="kgp-rec">
+              <Quote name="Shay Davidovich" role="Managed Kloe at the ICRC &middot; Strategic Communications Specialist"
+                avatar={<Avatar src="/images/shay-davidovich.jpg" name="Shay Davidovich" size="sm" />}>
+                One of the most creative individuals I&rsquo;ve ever collaborated with&hellip; she went
+                beyond merely leading; she dedicated herself to training, guiding, and ensuring a rich
+                tapestry of content. Her contributions, especially in the dynamic world of social media,
+                have been <em>instrumental</em> in our team&rsquo;s success.
+              </Quote>
+            </Card>
+            <Card pad="lg" className="kgp-rec">
+              <Quote name="Nat D&aacute;vila Merlo" role="Content Marketing Manager at Ling"
+                avatar={<Avatar src="/images/nat-davila-merlo.jpg" name="Nat Dávila Merlo" size="sm" />}>
+                Kloe is incredibly curious and always looking for ways to improve. I really appreciated
+                how open she was to exploring new ideas, whether it was social media, AI search, or
+                collaborating across teams. She&rsquo;s a fast learner, highly organized, and someone
+                who <em>genuinely enjoys growing her skills</em>.
+              </Quote>
+            </Card>
           </div>
         </div>
       </div>
