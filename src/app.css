@@ -133,3 +133,33 @@ html {
   }
   .kgp-highlight-grid > * { scroll-snap-align: start; }
 }
+
+/* revenue UGC ads: tiles share a height, width follows each video's own shape */
+.kgp-highlight-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem,2vw,1.75rem);
+  margin-top: 38px;
+  --tile-h: clamp(320px, 30vw, 440px);
+  --tile-max-w: calc(100vw - 2 * var(--gutter));
+}
+.kgp-highlight--fit {
+  --r: 0.5625;
+  height: min(var(--tile-h), calc(var(--tile-max-w) / var(--r)));
+  width: auto;
+  flex: 0 0 auto;
+}
+@media (max-width: 760px) {
+  .kgp-highlight-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+    padding-bottom: 6px;
+    --tile-h: min(440px, 62vh);
+    --tile-max-w: 82vw;
+  }
+  .kgp-highlight-row > * { scroll-snap-align: start; }
+}
