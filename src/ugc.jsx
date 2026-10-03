@@ -130,12 +130,20 @@ function Results() {
           </div>
         </div>
       </div>
-      <div style={{ borderTop: '1px solid var(--border-invert)', padding: '18px 0' }}>
-        <Marquee tone="invert" reverse items={[
-          'Thai', 'Tagalog', 'Khmer', 'Cebuano', 'Filipino', <>and <em>more</em></>, 'Native accents that convert',
-        ]} />
-      </div>
     </section>
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Languages banner - dark scrolling strip, sits right above the numbers.
+ * ------------------------------------------------------------------ */
+function LanguagesBanner() {
+  return (
+    <div style={{ background: 'var(--bg-invert)', color: 'var(--text-invert)', borderBottom: '1px solid var(--border-invert)', padding: '18px 0' }}>
+      <Marquee tone="invert" reverse items={[
+        'Thai', 'Tagalog', 'Khmer', 'Cebuano', 'Filipino', <>and <em>more</em></>, 'Native accents that convert',
+      ]} />
+    </div>
   );
 }
 
@@ -394,11 +402,12 @@ function UGC() {
     <React.Fragment>
       <Header />
       <Hero />
-      <window.UgcEssence />
       <FormatsBanner />
+      <window.UgcEssence />
       <TrustedBy />
-      <Results />
       <Reels />
+      <LanguagesBanner />
+      <Results />
       <CaseStudy />
       <Formats />
       <About />
