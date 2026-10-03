@@ -18,17 +18,17 @@ function About() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 26, fontSize: 17, lineHeight: 1.65, color: 'var(--text-muted)', maxWidth: '52ch' }}>
               <p>Hi, I&rsquo;m Kloe! I&rsquo;ve spent the last seven years making content for all
-                kinds of brands, from the ICRC&rsquo;s global channels to small businesses in Australia
-                and consumer brands in Singapore. It all started with broadcast training at CNN
-                Philippines, and I&rsquo;ve loved telling stories on camera ever since.</p>
-              <p>These days I lead content at Ling, a language-learning app. I joined as a content
-                creator and got promoted twice in two years, so now I look after our YouTube,
-                Facebook and Instagram, run a small team of freelance creators, and produce our
-                Tagalog Tea Time podcast. Along the way, the video ads I&rsquo;ve made have brought in
-                over $344K in revenue.</p>
+                kinds of brands, from the ICRC&rsquo;s global channels to small B2B enterprises in
+                Australia and consumer brands in Singapore. It all started with broadcast training at
+                CNN Philippines, and I&rsquo;ve loved telling stories on camera ever since.</p>
+              <p>These days I work in tech for language learning. I joined as a content creator and
+                now I look after our YouTube, Facebook and Instagram channel, run a small team of
+                freelance creators, and produce our Tagalog Tea Time podcast. Along the way, the video
+                ads I&rsquo;ve made have brought in multiple six-figures in revenue.</p>
               <p>I&rsquo;m happiest when I get to do the whole thing: dream up the strategy, film it,
                 edit it, then dig into the numbers to see what worked. And when I&rsquo;m off the clock,
-                you&rsquo;ll find me hosting POLITIS, my podcast about the language of politics.</p>
+                you&rsquo;ll find me writing poetry and hosting POLITIS, my podcast about the language of
+                politics and the politics of language.</p>
             </div>
             <div style={{ display: 'flex', gap: 10, marginTop: 28, flexWrap: 'wrap' }}>
               <Tag>7 yrs in social</Tag>
