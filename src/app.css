@@ -183,6 +183,13 @@ html {
   .kgp-highlight-grid > * { scroll-snap-align: start; }
 }
 
+/* second row of vertical (9:16) highlight reels (UGC page) */
+.kgp-highlight-grid--vertical { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(1rem,2vw,1.75rem); }
+.kgp-highlight-grid--vertical .kg-reel.kgp-highlight { aspect-ratio: 9 / 16; }
+@media (max-width: 760px) {
+  .kgp-highlight-grid--vertical { grid-template-columns: none; grid-auto-columns: 62%; }
+}
+
 /* revenue UGC ads: tiles share a height, width follows each video's own shape */
 .kgp-highlight-row {
   display: flex;

@@ -11,6 +11,7 @@
 import './ds/styles.css';
 import './app.css';
 import './ugc.css';
+import './sections/UgcHighlights.jsx';
 
 const {
   Kicker, Badge, Button, SectionHeader, Tag,
@@ -386,6 +387,7 @@ function UGC() {
       <Header />
       <Hero />
       <TrustedBy />
+      <window.UgcEssence />
       <Results />
       <Reels />
       <CaseStudy />
