@@ -142,7 +142,8 @@ html {
   --tile-h: clamp(320px, 30vw, 440px);
   --tile-max-w: calc(100vw - 2 * var(--gutter));
 }
-.kgp-highlight--fit {
+.kg-reel.kgp-highlight--fit {
+  aspect-ratio: 9 / 16;
   --r: 0.5625;
   height: min(var(--tile-h), calc(var(--tile-max-w) / var(--r)));
   width: auto;
