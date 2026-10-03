@@ -21,10 +21,10 @@ function About() {
                 kinds of brands, from the ICRC&rsquo;s global channels to small B2B enterprises in
                 Australia and consumer brands in Singapore. It all started with broadcast training at
                 CNN Philippines, and I&rsquo;ve loved telling stories on camera ever since.</p>
-              <p>These days I work in tech for language learning. I joined as a content creator and
-                now I look after our YouTube, Facebook and Instagram channel, run a small team of
-                freelance creators, and produce our Tagalog Tea Time podcast. Along the way, the video
-                ads I&rsquo;ve made have brought in multiple six-figures in revenue.</p>
+              <p>These days I work at a tech start-up in the language learning sector. I joined as a
+                content creator and now I look after our YouTube, Facebook and Instagram channels, run a
+                team of creators, and produce our Tagalog Tea Time podcast. Along the way, the video ads
+                I&rsquo;ve made have brought in multiple six-figures in revenue.</p>
               <p>I&rsquo;m happiest when I get to do the whole thing: dream up the strategy, film it,
                 edit it, then dig into the numbers to see what worked. And when I&rsquo;m off the clock,
                 you&rsquo;ll find me writing poetry and hosting POLITIS, my podcast about the language of
