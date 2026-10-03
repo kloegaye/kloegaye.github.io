@@ -77,13 +77,21 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div style={{ borderTop: '1px solid var(--divider)', borderBottom: '1px solid var(--divider)', padding: '20px 0' }}>
-        <Marquee items={[
-          <>Native-speaker <em>hooks</em></>, <>Before &amp; after</>, <>Competitor <em>switch</em></>,
-          'App demos', 'Testimonials', <>Multilingual <em>UGC</em></>, 'Paid-ready edits',
-        ]} />
-      </div>
     </section>
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Formats banner - scrolling strip of the formats I make.
+ * ------------------------------------------------------------------ */
+function FormatsBanner() {
+  return (
+    <div style={{ borderTop: '1px solid var(--divider)', borderBottom: '1px solid var(--divider)', padding: '20px 0' }}>
+      <Marquee items={[
+        <>Native-speaker <em>hooks</em></>, <>Before &amp; after</>, <>Competitor <em>switch</em></>,
+        'App demos', 'Testimonials', <>Multilingual <em>UGC</em></>, 'Paid-ready edits',
+      ]} />
+    </div>
   );
 }
 
@@ -386,8 +394,9 @@ function UGC() {
     <React.Fragment>
       <Header />
       <Hero />
-      <TrustedBy />
       <window.UgcEssence />
+      <FormatsBanner />
+      <TrustedBy />
       <Results />
       <Reels />
       <CaseStudy />
