@@ -335,8 +335,10 @@ function About() {
     <section style={{ background: 'var(--bg-alt)', borderTop: '1px solid var(--divider)', borderBottom: '1px solid var(--divider)' }}>
       <div style={CONTAINER}>
         <div className="kgp-about-grid" style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 'clamp(2rem,5vw,5rem)', alignItems: 'center', paddingBlock: 'var(--section-y)' }}>
-          <div style={{ aspectRatio: '5/6', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--surface-sunken)' }}>
-            <img src="/images/ugc-filming.jpg" alt="Kloe filming herself on a phone" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: 'min(420px, 100%)', aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', background: 'var(--surface-sunken)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-md)' }}>
+              <img src="/images/kloe.jpg" alt="Headshot of Kloe Gaye smiling" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.02) contrast(1.02)' }} />
+            </div>
           </div>
           <div>
             <Kicker rule>About</Kicker>
@@ -344,12 +346,27 @@ function About() {
               Creator <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>and</em> the strategist reading the dashboard.
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 24, fontSize: 17, lineHeight: 1.65, color: 'var(--text-muted)', maxWidth: '52ch' }}>
-              <p>I&rsquo;ve spent seven years in social, from the ICRC&rsquo;s global channels to
-                start-up growth teams. Today I run YouTube and Meta content for Ling, a language app,
-                and lead a small team of creators.</p>
-              <p>What makes my UGC work: I&rsquo;m on camera <em>and</em> in the analytics. I know why a
-                hook lands, what a good ROAS looks like, and how to iterate a concept until it scales.</p>
+              <p>Hi, I&rsquo;m Kloe! I&rsquo;ve spent seven years making content for all kinds of
+                brands, from the ICRC&rsquo;s global channels to small businesses in Australia and
+                consumer brands in Singapore. It started with broadcast training at CNN Philippines,
+                and I&rsquo;ve loved telling stories on camera ever since.</p>
+              <p>Today I&rsquo;m at Ling, a language-learning app. I joined as a content creator, was
+                promoted twice in two years, and now run our YouTube, Facebook and Instagram, lead a
+                team of three creators, and produce the Tagalog Tea Time podcast. The video ads
+                I&rsquo;ve made have brought in multiple six figures in revenue.</p>
             </div>
+            <Card tone="default" style={{ marginTop: 26, maxWidth: '52ch' }}>
+              <Kicker>What makes my UGC work</Kicker>
+              <ul className="kgp-svc-wins">
+                <li><b>I&rsquo;m on camera <em>and</em> in the analytics.</b> I know why a hook lands,
+                  what a good ROAS looks like, and how to iterate a concept until it scales.</li>
+                <li><b>Broadcast-trained delivery.</b> Natural, trustworthy presenting that feels like
+                  a friend&rsquo;s recommendation, not an ad.</li>
+                <li><b>One person, brief to final cut.</b> I write, shoot and edit myself, so ideas
+                  become paid-ready creatives fast.</li>
+                <li><b>Built for many markets.</b> One winning hook, re-cut across 8+ languages.</li>
+              </ul>
+            </Card>
             <div style={{ display: 'flex', gap: 10, marginTop: 26, flexWrap: 'wrap' }}>
               <Tag>7 yrs in social</Tag>
               <Tag>On-camera + editor</Tag>

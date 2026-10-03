@@ -21,7 +21,8 @@ html {
 /* small screens: nav collapses to logo + CTA (links don't fit at 390px).
    Scoped to nav so the UGC header's logo link (same class) is unaffected. */
 @media (max-width: 680px) {
-  nav .kgp-navlink { display: none; }
+  nav .kgp-navlink:not(.kgp-navlink--keep) { display: none; }
+  nav { gap: 20px !important; }
 }
 
 /* animated nav underline */
