@@ -163,7 +163,7 @@ function Reels() {
           {REELS.map((r) => <ReelTile key={r.slug} {...r} />)}
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-faint)', marginTop: 20, textTransform: 'uppercase' }}>
-          A selection from 170+ creatives. Full library on request.
+          A selection from 170+ creatives.
         </p>
       </div>
     </section>
