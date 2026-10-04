@@ -3,8 +3,8 @@
 // Same global-bundle setup as main.jsx: React/ReactDOM and
 // window.KloeGayeDesignSystem_152bdb are loaded as classic <script> tags
 // before this module. Spoken word pieces use Instagram's official embed
-// (blockquote + embed.js) and advocacy posts TikTok's (same pattern); without
-// the scripts they degrade to plain links.
+// (blockquote + embed.js), as do the advocacy posts; without the script they
+// degrade to plain links.
 
 import './ds/styles.css';
 import './app.css';
@@ -37,9 +37,9 @@ const POEMS = [
 ];
 
 const ADVOCACY = [
-  '7687901336255417620',
-  '7683710687457119509',
-  '7673889816223714580',
+  'https://www.instagram.com/p/Ddit_KmEvKg/',
+  'https://www.instagram.com/p/DdEljvHEpfP/',
+  'https://www.instagram.com/p/DbOHtYHkjsh/',
 ];
 
 const SPOTIFY_URL = 'https://open.spotify.com/show/033LR0sDePGK4ooQQHcmMY';
@@ -74,21 +74,7 @@ function InstagramEmbed({ url }) {
     <div className="kgp-pj-poem">
       <blockquote className="instagram-media" data-instgrm-permalink={url} data-instgrm-version="14"
         style={{ margin: 0, width: '100%', minWidth: 0, maxWidth: '100%' }}>
-        <a href={url} target="_blank" rel="noopener noreferrer">Watch on Instagram</a>
-      </blockquote>
-    </div>
-  );
-}
-
-function TikTokEmbed({ id }) {
-  const url = `https://www.tiktok.com/@kloe.creates/photo/${id}`;
-  return (
-    <div className="kgp-pj-poem">
-      <blockquote className="tiktok-embed" cite={url} data-video-id={id}
-        style={{ margin: 0, width: '100%', minWidth: 0, maxWidth: '100%' }}>
-        <section>
-          <a href={url} target="_blank" rel="noopener noreferrer">View on TikTok</a>
-        </section>
+        <a href={url} target="_blank" rel="noopener noreferrer">View on Instagram</a>
       </blockquote>
     </div>
   );
@@ -106,7 +92,6 @@ function Projects() {
   React.useEffect(() => {
     if (window.instgrm) window.instgrm.Embeds.process();
     else loadScript('https://www.instagram.com/embed.js');
-    loadScript('https://www.tiktok.com/embed.js');
   }, []);
 
   return (
@@ -166,7 +151,7 @@ function Projects() {
         <Section id="advocacy">
           <SectionHeader kicker="Advocacy" title={<>Causes I speak <em>up</em> for</>} />
           <div className="kgp-pj-poems">
-            {ADVOCACY.map((id) => <TikTokEmbed key={id} id={id} />)}
+            {ADVOCACY.map((u) => <InstagramEmbed key={u} url={u} />)}
           </div>
         </Section>
 
