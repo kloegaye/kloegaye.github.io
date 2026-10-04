@@ -9,6 +9,12 @@ const HIGHLIGHTS = [
   { brand: 'Cafe Slow Hoi An', driveId: '1cpgf5vr1H9ZIl-xOTr8Un6r4I5JTY3T8' },
 ];
 
+// Homepage version of HIGHLIGHTS (first tile uses a different video).
+const HOME_HIGHLIGHTS = [
+  { brand: 'Monsoon Tea One Nimman', driveId: '1fCOgfkBSJiw762m6yC3URBFlc53Y82I2' },
+  ...HIGHLIGHTS.slice(1),
+];
+
 // Vertical (9:16) second row - shown on the UGC page under HIGHLIGHTS.
 const VERTICALS = [
   { brand: 'Monsoon Tea One Nimman', driveId: '1g0T4SsKpj1UCFA7Xmpl_81t1lFraYd4D' },
@@ -188,7 +194,7 @@ function UgcHighlights() {
         <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>}
           lede="Aesthetic, scroll-stopping UGC for cafés and lifestyle brands" />
         <div className="kgp-highlight-grid">
-          {HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
+          {HOME_HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
         </div>
         <UgcProgramButton />
       </div>
