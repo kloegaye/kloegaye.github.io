@@ -422,9 +422,9 @@ function UGC() {
       <Hero />
       <FormatsBanner />
       <window.UgcEssence />
+      <Reels />
       <window.UgcMessage />
       <TrustedBy />
-      <Reels />
       <LanguagesBanner />
       <Results />
       <CaseStudy />
