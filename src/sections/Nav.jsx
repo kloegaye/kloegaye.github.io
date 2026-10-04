@@ -35,6 +35,9 @@ function Nav() {
               fontSize: 14, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.01em',
             }}>{l}</a>
           ))}
+          <a href="/projects.html" className="kgp-navlink kgp-navlink--keep" style={{
+            fontSize: 14, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.01em',
+          }}>Projects</a>
           <a href="/cv.html" className="kgp-navlink kgp-navlink--keep" style={{
             fontSize: 14, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.01em',
           }}>CV</a>

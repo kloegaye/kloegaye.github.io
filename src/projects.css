@@ -1,0 +1,173 @@
+/* ============================================================
+   Kloe Gaye - personal projects page styles
+   (Base tokens, components and shared helpers come from ds/ and app.css.)
+   ============================================================ */
+
+.kgp-pj-top {
+  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(1rem, 2vw, 1.5rem);
+}
+.kgp-pj-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  margin: 20px 0 0;
+}
+.kgp-pj-title em { font-style: italic; font-weight: 500; color: var(--accent); }
+.kgp-pj-lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 56ch;
+  margin: 20px 0 0;
+}
+
+.kgp-pj-section {
+  padding-block: var(--section-y);
+  border-top: 1px solid var(--divider);
+}
+.kgp-pj-section:first-of-type { border-top: 0; }
+
+.kgp-pj-meta {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.kgp-pj-text {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 46ch;
+}
+
+/* books: typographic covers */
+.kgp-pj-books {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: 38px;
+}
+.kgp-pj-book {
+  display: grid;
+  grid-template-columns: minmax(0, 170px) 1fr;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center;
+}
+.kgp-pj-cover {
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.kgp-pj-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--accent);
+}
+.kgp-pj-cover-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.kgp-pj-cover-author {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.kgp-pj-booktitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+  margin: 8px 0 0;
+}
+
+/* magazine features */
+.kgp-pj-press {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  margin-top: 38px;
+}
+.kgp-pj-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .24s var(--ease-out), transform .24s var(--ease-out);
+}
+.kgp-pj-feature:hover { border-color: var(--accent); transform: translateY(-2px); }
+.kgp-pj-feature-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.kgp-pj-readlink { margin-top: auto; font-size: 14px; font-weight: 500; color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  .kgp-pj-feature, .kgp-pj-feature:hover { transition: none; transform: none; }
+}
+
+/* spoken word: Instagram embeds */
+.kgp-pj-poems {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
+  margin-top: 38px;
+  align-items: start;
+}
+.kgp-pj-poem { min-width: 0; }
+.kgp-pj-poem .instagram-media,
+.kgp-pj-poem iframe { min-width: 0 !important; width: 100% !important; border-radius: var(--radius-lg) !important; }
+.kgp-pj-poem blockquote.instagram-media {
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.kgp-pj-poem blockquote.instagram-media a { color: var(--accent); font-weight: 500; }
+
+.kgp-pj-end {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+@media (max-width: 960px) {
+  .kgp-pj-books, .kgp-pj-press { grid-template-columns: 1fr; }
+  .kgp-pj-poems { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .kgp-pj-poems { grid-template-columns: 1fr; max-width: 420px; }
+  .kgp-pj-book { grid-template-columns: 120px 1fr; }
+  .kgp-pj-cover-title { font-size: 17px; }
+  .kgp-pj-headtag { display: none; }
+}

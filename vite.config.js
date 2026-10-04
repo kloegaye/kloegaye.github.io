@@ -20,11 +20,12 @@ export default defineConfig({
     outDir: 'dist',
     target: 'es2018',
     rollupOptions: {
-      // Multi-page build: the main portfolio the hidden, unlinked UGC page, and the CV page.
+      // Multi-page build: the main portfolio the hidden, unlinked UGC page, the CV page, and the personal projects page.
       input: {
         main: resolve(root, 'index.html'),
         ugc: resolve(root, 'ugc.html'),
         cv: resolve(root, 'cv.html'),
+        projects: resolve(root, 'projects.html'),
       },
     },
   },
