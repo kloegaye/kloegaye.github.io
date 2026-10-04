@@ -23,6 +23,15 @@ html {
 @media (max-width: 680px) {
   nav .kgp-navlink:not(.kgp-navlink--keep) { display: none; }
   nav { gap: 20px !important; }
+  header a[href="#top"] { white-space: nowrap; margin-right: 16px; }
+}
+/* very small phones: tighten so logo, Projects/UGC/CV and the CTA fit on one row */
+@media (max-width: 420px) {
+  nav { gap: 12px !important; }
+  nav .kgp-navlink { font-size: 13px !important; }
+  nav .kg-btn__ic { display: none; }
+  nav .kg-btn { padding-inline: 12px !important; }
+  header a[href="#top"] { font-size: 19px !important; margin-right: 10px; }
 }
 
 /* animated nav underline */
