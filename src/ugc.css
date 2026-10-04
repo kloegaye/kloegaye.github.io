@@ -29,26 +29,6 @@
 .kgp-table tbody tr:last-child td,
 .kgp-table tr:last-child td { border-bottom: none; }
 
-/* click-to-play video reels (extends the ds .kg-reel card) */
-.kgp-reel-live { cursor: pointer; }
-/* Drive-hosted tiles in the reel grid: same 9:16 shape as the local reels */
-.kgp-reel-grid .kg-reel.kgp-highlight { aspect-ratio: 9 / 16; }
-.kgp-reel-live video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.kgp-reel-live .kg-reel__scrim,
-.kgp-reel-live .kg-reel__play,
-.kgp-reel-live .kg-reel__bottom {
-  transition: opacity var(--dur-base, 0.25s) ease;
-}
-.kgp-reel-live.is-playing .kg-reel__scrim,
-.kgp-reel-live.is-playing .kg-reel__play,
-.kgp-reel-live.is-playing .kg-reel__bottom { opacity: 0; pointer-events: none; }
-
 /* responsive grids unique to this page */
 @media (max-width: 1000px) {
   .kgp-reel-grid { grid-template-columns: repeat(3, 1fr) !important; }
