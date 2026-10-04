@@ -34,6 +34,18 @@ const ICRC_VIDEOS = [
   { brand: 'ICRC TikTok 4', driveId: '1spCNT0JO0YXvmuQK7qgoHPQklX6KOdX1' },
 ];
 
+// Organic videos (vertical) - "Share your brand's message" section, UGC page.
+const ORGANIC_VIDEOS = [
+  { brand: 'Organic video 1', driveId: '1nE6xl0PgYIBaGqWx4d0eAaHm_EKYDYCi' },
+  { brand: 'Organic video 2', driveId: '1zVOj8ULp9wCN4W7xSAsiUW4hvTtdpfYp' },
+  { brand: 'Organic video 3', driveId: '1mlEA66Ke_pRNG1Qx-453xbEIxiaJhMfG' },
+  { brand: 'Organic video 4', driveId: '1D6m3pEx_YaQhsKAFPkEScr7kzzjix0v3' },
+  { brand: 'Organic video 5', driveId: '1spCNT0JO0YXvmuQK7qgoHPQklX6KOdX1' },
+  { brand: 'Organic video 6', driveId: '1NENOmL0NkkrwQgHq7CUlqdBEuExXXn1y' },
+  { brand: 'Organic video 7', driveId: '1xhd7BrkYQI7SPJvg7qHrPjKriSsGi7N2' },
+  { brand: 'Organic video 8', driveId: '1fx46Do2pDACxcTTSSuDVA9Ust1fUVnQ9' },
+];
+
 /*
  * Same look as the ds ReelCard (reuses its .kg-reel classes). Shows the Drive
  * thumbnail; on click swaps in Drive's embedded player.
@@ -162,4 +174,19 @@ function IcrcMessage() {
   );
 }
 
-Object.assign(window, { UgcHighlights, UgcAds, UgcEssence, IcrcMessage });
+// "Share your brand's message" - organic short-form work, UGC page.
+function UgcMessage() {
+  return (
+    <section id="ugc-message" style={{ paddingBlock: 'var(--section-y)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
+        <SectionHeader kicker="Organic content" title={<>Share your brand&rsquo;s <em>message</em></>}
+          lede="Educational and engaging organic short-form content that informs, entertains and builds a community around your brand." />
+        <div className="kgp-highlight-grid kgp-highlight-grid--vertical">
+          {ORGANIC_VIDEOS.map((h) => <HighlightReel key={h.driveId} {...h} platform="Organic" showTitle={false} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { UgcHighlights, UgcAds, UgcEssence, IcrcMessage, UgcMessage });

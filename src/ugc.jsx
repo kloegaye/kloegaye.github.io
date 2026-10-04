@@ -420,6 +420,7 @@ function UGC() {
       <Hero />
       <FormatsBanner />
       <window.UgcEssence />
+      <window.UgcMessage />
       <TrustedBy />
       <Reels />
       <LanguagesBanner />
