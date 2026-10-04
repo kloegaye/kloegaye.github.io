@@ -5,15 +5,15 @@ const { SectionHeader, Button } = window.KloeGayeDesignSystem_152bdb;
 // with the link"). `driveId: null` renders a "coming soon" placeholder tile.
 const HIGHLIGHTS = [
   { brand: 'Monsoon Tea One Nimman', driveId: '182oi-TLCozQbuRjOBgb1OmZMYtTW4TzQ' },
-  { brand: 'CHAAN Tea House', driveId: null },
-  { brand: 'Cafe Slow Hoi An', driveId: null },
+  { brand: 'CHAAN Tea House', driveId: '1cpgf5vr1H9ZIl-xOTr8Un6r4I5JTY3T8' },
+  { brand: 'Cafe Slow Hoi An', driveId: '1-z3F8FojGD3TvIyg6SWkR9CWUWbBG87-' },
 ];
 
 // Vertical (9:16) second row - shown on the UGC page under HIGHLIGHTS.
 const VERTICALS = [
   { brand: 'Monsoon Tea One Nimman', driveId: '1g0T4SsKpj1UCFA7Xmpl_81t1lFraYd4D' },
-  { brand: 'Ge Cafe Da Nang', driveId: null },
-  { brand: 'Hello Cola', driveId: null },
+  { brand: 'Ge Cafe Da Nang', driveId: '11XVChIDo8H5gWUBjpLOm94WupmpwqQLb' },
+  { brand: 'Hello Cola', driveId: '1dpoYEWP7PHCrqIgNH9BrbVLwyYOUwqEh' },
   { brand: 'Monsoon Tea Jing Jai', driveId: '1uqrLVHI5pQ2Hbcu1ioP6YOg8NNc0yXnj' },
 ];
 
