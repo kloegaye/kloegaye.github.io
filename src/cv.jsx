@@ -35,7 +35,7 @@ const EXPERIENCE = [
       ] },
       { title: 'Social Media Marketer & Junior ASO Specialist', dates: 'November 2024 – March 2026', points: [
         'Generated multiple six-figures in revenue (in USD) through Meta Ads creatives.',
-        'Managed Ling’s main Instagram account (@ling_app) and grew it by 150% through organic content.',
+        'Managed Ling’s main Instagram account (@ling_app) and grew it by 200% in market share through organic content.',
         'Managed App Store Optimization on iOS and Android, including custom store listings for the UK and Australian markets.',
         'Managed Apple Search Ads for the UK and Australian markets.',
       ] },

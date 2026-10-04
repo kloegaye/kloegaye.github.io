@@ -7,7 +7,7 @@ const SERVICES = [
     body: 'Channel plans, positioning, hooks, posting calendars and weekly reporting.',
     wins: [
       'Own the organic strategy for Ling across Facebook, Instagram, YouTube, Threads and Spotify, covering 6+ brand profiles.',
-      'Grew Ling’s main Instagram (@ling_app) by 150% through organic content.',
+      'Grew Ling’s main Instagram (@ling_app) by 200% in market share through organic content.',
       'Wrote the ICRC’s global social media branding guidelines and led the redesign of its global Instagram (@icrc).',
       'Ran the social pages of seven Australian small and medium businesses on Facebook and LinkedIn.',
     ],

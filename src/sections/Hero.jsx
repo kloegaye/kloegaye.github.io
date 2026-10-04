@@ -74,7 +74,7 @@ function Hero() {
               border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '14px 18px',
               boxShadow: 'var(--shadow-md)',
             }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>+150%</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 30, fontWeight: 600, lineHeight: 1, color: 'var(--text)' }}>+200%</div>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: 4 }}>market share &middot; organic social</div>
             </div>
           </div>

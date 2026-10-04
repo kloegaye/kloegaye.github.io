@@ -12,7 +12,7 @@ const WORK = [
   },
   {
     id: 2, cat: 'Social', image: '/images/work-organic-heart.jpg', category: 'Organic social · Ling', year: '2024–26',
-    title: <>+150% market share, all <em>organic</em></>, tags: ['Instagram', 'YouTube', 'Strategy'],
+    title: <>+200% market share, all <em>organic</em></>, tags: ['Instagram', 'YouTube', 'Strategy'],
     href: 'https://www.instagram.com/ling_app/', external: true,
   },
   {
