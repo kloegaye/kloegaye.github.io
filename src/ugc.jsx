@@ -155,16 +155,17 @@ function LanguagesBanner() {
 // Jan 2025 - Sep 2026 performance export (same de-identified figures as the case-study
 // table below - exact revenue/ROAS withheld at the brand's request). Organic
 // and ICRC tiles carry no revenue claim.
+// Sorted by purchases (highest first); titles are "Language: hook".
+// Drive tiles play from Kloe's Google Drive (must stay shared as "Anyone with the link").
 const REELS = [
-  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>1,650+ purchases</>, title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
-  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>1,550+ purchases</>, title: <>The winning hook, cut for Tagalog</> },
-  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>Top seller &middot; 3,150+ purchases</>, title: <>Real voices, not an AI</> },
-  { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
-  { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', stat: <>750+ purchases</>, title: <>Tagalog greetings: formal vs casual</> },
-  // Played from Kloe's Google Drive (must stay shared as "Anyone with the link").
-  { slug: 'drive-1', driveId: '1o67JmxUUMphhxTEUVgWecN7Gc-Evw3Fb', stat: <>1,100+ purchases</> }, // Kloe_Script #1 - Basic
-  { slug: 'drive-2', driveId: '1-tuUNtnCw1icCsLY2IYs-9dq43p2QICV', stat: <>350+ purchases</> }, // Kloe_Script #26 - Basic
-  { slug: 'drive-3', driveId: '1y3hzQswvv-wlMaj-JWA4jSWLBwgnYFlG', stat: <>1,550+ purchases</> }, // Kloe_NativeThai_Tagalog_EN1
+  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>Top seller &middot; 3,150+ purchases</>, title: <>English: &ldquo;I&rsquo;m not an AI&rdquo;</> },
+  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>1,650+ purchases</>, title: <>Thai: a native reacts to your accent</> },
+  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>1,550+ purchases</>, title: <>Tagalog: a native reacts to your accent</> },
+  { slug: 'drive-3', platform: 'Meta Ads', driveId: '1y3hzQswvv-wlMaj-JWA4jSWLBwgnYFlG', stat: <>1,550+ purchases</>, title: 'Thai × Tagalog: native reaction remix' }, // Kloe_NativeThai_Tagalog_EN1
+  { slug: 'drive-1', platform: 'Meta Ads', driveId: '1o67JmxUUMphhxTEUVgWecN7Gc-Evw3Fb', stat: <>1,100+ purchases</>, title: 'Tagalog: the basics' }, // Kloe_Script #1 - Basic
+  { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', stat: <>750+ purchases</>, title: <>Tagalog: formal vs casual greetings</> },
+  { slug: 'drive-2', platform: 'Meta Ads', driveId: '1-tuUNtnCw1icCsLY2IYs-9dq43p2QICV', stat: <>350+ purchases</>, title: 'Tagalog: more everyday basics' }, // Kloe_Script #26 - Basic
+  { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Tagalog: beginner vs expert</> },
 ];
 
 /*
@@ -226,7 +227,7 @@ function Reels() {
           lede="A curated set of the hooks and formats that performed best. Vertical, native, and built to be watched with the sound on." />
         <div className="kgp-reel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1rem,2vw,1.75rem)', marginTop: 38 }}>
           {REELS.map((r) => (r.driveId
-            ? <window.HighlightReel key={r.slug} brand="UGC video" driveId={r.driveId} stat={r.stat} showTitle={false} />
+            ? <window.HighlightReel key={r.slug} brand={r.title} platform={r.platform} driveId={r.driveId} stat={r.stat} />
             : <VideoReel key={r.slug} {...r} />
           ))}
         </div>
