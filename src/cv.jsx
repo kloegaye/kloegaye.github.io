@@ -202,7 +202,7 @@ function CV() {
           </div>
           <div className="kgp-cv-role">
             <h3>Author</h3>
-            <Points items={['naked. (poems and prose)', 'when i knew it was over (short stories)', 'Featured in Preview Magazine and Candy Magazine']} />
+            <Points items={['naked. (poems and prose)', 'when i knew it was over (novel)', 'Featured in Preview Magazine and Candy Magazine']} />
           </div>
           <div className="kgp-cv-role">
             <h3>Founder, The Foster Gays (2021)</h3>

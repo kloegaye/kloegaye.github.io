@@ -14,10 +14,10 @@ const { SectionHeader, Button, Kicker } = window.KloeGayeDesignSystem_152bdb;
 const CONTAINER = { maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' };
 
 const BOOKS = [
-  { title: 'naked.', kind: 'Poems and prose',
+  { title: 'naked.', subtitle: 'the ugly parts of you', kind: 'Poems and prose', cover: '/images/book-naked.jpg',
     blurb: 'My debut collection: poems, phone notes written in traffic and scribbles from the margins of school notebooks, charting a healing journey.' },
-  { title: 'when i knew it was over', kind: 'Short stories',
-    blurb: 'A collection of short stories, written, designed and published independently.' },
+  { title: 'when i knew it was over', kind: 'Novel', cover: '/images/book-when-i-knew-it-was-over.jpg',
+    blurb: 'My first novel, written, designed and published independently.' },
 ];
 
 const FEATURES = [
@@ -102,13 +102,13 @@ function Projects() {
           <div className="kgp-pj-books">
             {BOOKS.map((b) => (
               <article key={b.title} className="kgp-pj-book">
-                <div className="kgp-pj-cover" aria-hidden="true">
-                  <span className="kgp-pj-cover-title">{b.title}</span>
-                  <span className="kgp-pj-cover-author">Kloe Gaye</span>
+                <div className="kgp-pj-cover">
+                  <img src={b.cover} alt={`Cover of ${b.title} by Kloe Gaye`} loading="lazy" width="440" height="690" />
                 </div>
                 <div>
                   <span className="kgp-pj-meta">{b.kind}</span>
                   <h3 className="kgp-pj-booktitle">{b.title}</h3>
+                  {b.subtitle && <p className="kgp-pj-subtitle">{b.subtitle}</p>}
                   <p className="kgp-pj-text">{b.blurb}</p>
                 </div>
               </article>

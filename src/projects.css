@@ -60,39 +60,22 @@
 }
 .kgp-pj-cover {
   aspect-ratio: 2 / 3;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  box-shadow: var(--shadow-md);
-  padding: 18px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  border-radius: var(--radius-sm);
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
-.kgp-pj-cover::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: var(--accent);
+.kgp-pj-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.kgp-pj-cover-title {
+.kgp-pj-subtitle {
+  margin: 4px 0 0;
   font-family: var(--font-display);
   font-style: italic;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  color: var(--text);
-}
-.kgp-pj-cover-author {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-faint);
+  font-size: 16px;
+  color: var(--text-muted);
 }
 .kgp-pj-booktitle {
   font-family: var(--font-display);
@@ -168,6 +151,5 @@
 @media (max-width: 640px) {
   .kgp-pj-poems { grid-template-columns: 1fr; max-width: 420px; }
   .kgp-pj-book { grid-template-columns: 120px 1fr; }
-  .kgp-pj-cover-title { font-size: 17px; }
   .kgp-pj-headtag { display: none; }
 }
