@@ -162,9 +162,9 @@ const REELS = [
   { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
   { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', stat: <>750+ purchases</>, title: <>Tagalog greetings: formal vs casual</> },
   // Played from Kloe's Google Drive (must stay shared as "Anyone with the link").
-  { slug: 'drive-1', driveId: '1o67JmxUUMphhxTEUVgWecN7Gc-Evw3Fb' },
-  { slug: 'drive-2', driveId: '1-tuUNtnCw1icCsLY2IYs-9dq43p2QICV' },
-  { slug: 'drive-3', driveId: '1y3hzQswvv-wlMaj-JWA4jSWLBwgnYFlG' },
+  { slug: 'drive-1', driveId: '1o67JmxUUMphhxTEUVgWecN7Gc-Evw3Fb', stat: <>1,100+ purchases</> }, // Kloe_Script #1 - Basic
+  { slug: 'drive-2', driveId: '1-tuUNtnCw1icCsLY2IYs-9dq43p2QICV', stat: <>350+ purchases</> }, // Kloe_Script #26 - Basic
+  { slug: 'drive-3', driveId: '1y3hzQswvv-wlMaj-JWA4jSWLBwgnYFlG', stat: <>1,550+ purchases</> }, // Kloe_NativeThai_Tagalog_EN1
 ];
 
 /*
@@ -226,7 +226,7 @@ function Reels() {
           lede="A curated set of the hooks and formats that performed best. Vertical, native, and built to be watched with the sound on." />
         <div className="kgp-reel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1rem,2vw,1.75rem)', marginTop: 38 }}>
           {REELS.map((r) => (r.driveId
-            ? <window.HighlightReel key={r.slug} brand="UGC video" driveId={r.driveId} showTitle={false} />
+            ? <window.HighlightReel key={r.slug} brand="UGC video" driveId={r.driveId} stat={r.stat} showTitle={false} />
             : <VideoReel key={r.slug} {...r} />
           ))}
         </div>
