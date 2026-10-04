@@ -7,7 +7,7 @@ const { SectionHeader, Tag, WorkCard, Button } = window.KloeGayeDesignSystem_152
 const WORK = [
   {
     id: 1, cat: 'Video', image: '/images/work-ugc.jpg', category: 'UGC · Paid social', year: '2025–26',
-    title: <>The UGC program that <em>converts</em></>, tags: ['Meta Ads', 'On-camera', '160 creatives'],
+    title: <>The UGC program that <em>converts</em></>, tags: ['Meta Ads', 'On-camera', '170+ creatives'],
     href: '/ugc.html',
   },
   {

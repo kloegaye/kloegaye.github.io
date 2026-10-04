@@ -125,8 +125,8 @@ function Results() {
           <div className="kgp-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1.5rem,3vw,3rem)', marginTop: 'clamp(2.5rem,5vw,4.5rem)', paddingTop: 'clamp(2rem,4vw,3rem)', borderTop: '1px solid var(--border-invert)' }}>
             <Stat tone="invert" value="6" suffix="-figure" label="USD revenue driven via Meta Ads creatives" />
             <Stat tone="invert" value="3" suffix="x+" label="Account-average ROAS, beaten by top creatives" />
-            <Stat tone="invert" value="1,200" suffix="+" label="App purchases from one quarter of UGC" />
-            <Stat tone="invert" value="160" label="UGC creatives written, shot &amp; tested" />
+            <Stat tone="invert" value="14,000" suffix="+" label="App purchases driven by my UGC ads" />
+            <Stat tone="invert" value="170" suffix="+" label="UGC creatives written, shot &amp; tested" />
           </div>
         </div>
       </div>
@@ -152,13 +152,13 @@ function LanguagesBanner() {
  * Real videos, compressed for web, in public/reels/. Click to play.
  * ------------------------------------------------------------------ */
 // `stat` = ad-set performance where the creative maps to a concept in the
-// Q4 2025 performance export (same de-identified figures as the case-study
+// Jan 2025 - Sep 2026 performance export (same de-identified figures as the case-study
 // table below - exact revenue/ROAS withheld at the brand's request). Organic
 // and ICRC tiles carry no revenue claim.
 const REELS = [
-  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>Top earner &middot; 700+ purchases</>, title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
-  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>250+ purchases</>, title: <>The winning hook, cut for Tagalog</> },
-  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>160+ purchases</>, title: <>Real voices, not an AI</> },
+  { slug: 'thai-native', platform: 'Meta Ads', duration: '0:49', stat: <>1,650+ purchases</>, title: <>&ldquo;A native Thai reacts to your accent&rdquo;</> },
+  { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>1,550+ purchases</>, title: <>The winning hook, cut for Tagalog</> },
+  { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>Top seller &middot; 3,150+ purchases</>, title: <>Real voices, not an AI</> },
   { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
   { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', title: <>Tagalog greetings: formal vs casual</> },
   { slug: 'filipino-romantic-names', platform: 'TikTok', duration: '0:36', title: <>&ldquo;Mahal ko&rdquo; &amp; other pet names</> },
@@ -229,7 +229,7 @@ function Reels() {
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-faint)', marginTop: 20, textTransform: 'uppercase' }}>
-          A selection from 160+ creatives. Full library on request.
+          A selection from 170+ creatives. Full library on request.
         </p>
       </div>
     </section>
@@ -240,10 +240,11 @@ function Reels() {
  * Case study - the flagship concept, with the real performance table.
  * ------------------------------------------------------------------ */
 const CASE_ROWS = [
-  { concept: 'Native Thai (flagship)', variants: '“A native reacts to your accent”, 8+ language cuts', share: '62%', purchases: '700+' },
-  { concept: 'Native Thai × Tagalog', variants: 'Cross-language remix of the winning hook', share: '21%', purchases: '250+' },
-  { concept: 'Leave Duolingo', variants: 'Competitor-switch narrative, AI iteration', share: '13%', purchases: '160+' },
-  { concept: 'Native Thai EN-TH', variants: 'Tightest edit, best sustained ROAS', share: '4%', purchases: '45+' },
+  { concept: 'Leave Duolingo', variants: 'Competitor-switch narrative, AI iteration', share: '22%', purchases: '3,150+' },
+  { concept: 'Sound Like a Native', variants: 'Accent-coaching hook, Filipino & Khmer cuts', share: '15%', purchases: '2,150+' },
+  { concept: 'Native Thai (flagship)', variants: '“A native reacts to your accent”, 8+ language cuts', share: '12%', purchases: '1,650+' },
+  { concept: 'Native Thai × Tagalog', variants: 'Cross-language remix of the winning hook', share: '11%', purchases: '1,550+' },
+  { concept: 'Native Thai EN-TH', variants: 'Tightest edit, best sustained ROAS', share: '8%', purchases: '1,150+' },
 ];
 
 function CaseStudy() {
@@ -253,9 +254,9 @@ function CaseStudy() {
         <div className="kgp-services-grid" style={{ display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 'clamp(2rem,5vw,4rem)', paddingBlock: 'var(--section-y)', alignItems: 'start' }}>
           <div>
             <SectionHeader kicker="Case study" title={<>One hook, <em>tested</em> to scale</>}
-              lede="The “native speaker reacts to your accent” concept became the account’s top earner. I cut it across 8+ languages and ad angles, then let spend follow the winners." />
+              lede="The “native speaker reacts to your accent” hook became one of the account’s top earners. I cut it across 8+ languages and ad angles, then let spend follow the winners: the Native Thai cuts alone drove 4,400+ purchases." />
             <div style={{ display: 'flex', gap: 10, marginTop: 24, flexWrap: 'wrap' }}>
-              <Tag>Q4 2025</Tag>
+              <Tag>2025–26</Tag>
               <Tag>Ling &middot; Meta Ads</Tag>
               <Tag>On-camera + edit</Tag>
             </div>
@@ -266,7 +267,7 @@ function CaseStudy() {
                 <thead>
                   <tr>
                     <th>Creative concept</th>
-                    <th style={{ textAlign: 'right' }}>Revenue share</th>
+                    <th style={{ textAlign: 'right' }}>Share of purchases</th>
                     <th style={{ textAlign: 'right' }}>Purchases</th>
                   </tr>
                 </thead>
@@ -285,7 +286,8 @@ function CaseStudy() {
               </table>
             </div>
             <div style={{ padding: '14px 20px', borderTop: '1px solid var(--divider)', fontSize: 12.5, color: 'var(--text-muted)' }}>
-              Share of tracked first-purchase revenue, Meta Ads, Q4 2025. Top creatives peaked at 3x the
+              Share of the 14,000+ purchases from my on-camera creatives, Meta Ads, Jan 2025 &ndash; Sep 2026
+              (92M+ impressions). Top creatives peaked at 3x the
               account&rsquo;s average ROAS. Exact revenue and ROAS figures available on request.
             </div>
           </Card>

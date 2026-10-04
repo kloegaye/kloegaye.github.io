@@ -22,7 +22,7 @@ function Statement() {
           }} className="kgp-stats-grid">
             <Stat tone="invert" value="150" suffix="%+" label="Market share growth from organic Instagram" />
             <Stat tone="invert" value="6" suffix="-figure" label="USD revenue driven through Meta Ads creatives" />
-            <Stat tone="invert" value="160" label="UGC creatives written, shot &amp; tested" />
+            <Stat tone="invert" value="170" suffix="+" label="UGC creatives written, shot &amp; tested" />
             <Stat tone="invert" value="7" suffix="yrs" label="Content across nonprofit &amp; start-up tech" />
           </div>
         </div>
