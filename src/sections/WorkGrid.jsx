@@ -27,41 +27,46 @@ const WORK = [
   },
   {
     id: 5, cat: 'Video', youtube: 'rjpmPK3ATEc', category: 'Podcast · Ling',
-    title: <>Tagalog Tea Time, <em>produced</em> end to end</>, tags: ['Podcast', 'YouTube', 'Production'],
+    title: <>Tagalog Tea Time, <em>produced</em> end to end</>,
+    body: 'Ling’s podcast for Tagalog learners. I produce it from start to finish: planning each episode, recording, editing and publishing it to YouTube.',
+    tags: ['Podcast', 'YouTube', 'Production'],
   },
 ];
 const FILTERS = ['All', 'Social', 'Video', 'ASO'];
 
-/* Same look as the ds WorkCard, but the thumbnail plays the YouTube video
- * in a lightbox on the page instead of linking away. */
-function VideoWorkCard({ youtube, index, category, year, title, tags = [] }) {
-  const [open, setOpen] = React.useState(false);
+/* Wide feature row under the cards: the full 16:9 YouTube thumbnail with the
+ * write-up beside it. Same ds WorkCard pieces; clicking the thumbnail swaps in
+ * YouTube's player right there. */
+function VideoFeature({ youtube, index, category, year, title, body, tags = [] }) {
+  const [playing, setPlaying] = React.useState(false);
   const [thumb, setThumb] = React.useState(`https://i.ytimg.com/vi/${youtube}/maxresdefault.jpg`);
-  const close = () => setOpen(false);
-  React.useEffect(() => {
-    if (!open) return undefined;
-    const onKey = (e) => { if (e.key === 'Escape') close(); };
-    document.addEventListener('keydown', onKey);
-    document.body.style.overflow = 'hidden';
-    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
-  }, [open]);
+  const play = () => setPlaying(true);
   return (
-    <>
-      <div className="kg-work kgp-work-video" role="button" tabIndex={0}
-        aria-label="Play Tagalog Tea Time video"
-        onClick={() => setOpen(true)}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(true); } }}>
-        <div className="kg-work__media">
-          {index != null && <span className="kg-work__index">{index}</span>}
-          {thumb && (
-            <img src={thumb} alt="" loading="lazy"
-              onLoad={(e) => { if (e.currentTarget.naturalWidth <= 120) setThumb(`https://i.ytimg.com/vi/${youtube}/hqdefault.jpg`); }}
-              onError={() => setThumb((t) => (t.includes('maxres') ? `https://i.ytimg.com/vi/${youtube}/hqdefault.jpg` : null))} />
-          )}
-          <div className="kg-reel__play" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-          </div>
-        </div>
+    <div className="kg-work kgp-work-feature">
+      <div className={`kg-work__media${playing ? ' is-playing' : ''}`}
+        {...(playing ? {} : {
+          role: 'button', tabIndex: 0, 'aria-label': 'Play Tagalog Tea Time video', onClick: play,
+          onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } },
+        })}>
+        {playing ? (
+          <iframe src={`https://www.youtube-nocookie.com/embed/${youtube}?autoplay=1&rel=0`}
+            title="Tagalog Tea Time on YouTube"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen />
+        ) : (
+          <>
+            {index != null && <span className="kg-work__index">{index}</span>}
+            {thumb && (
+              <img src={thumb} alt="" loading="lazy"
+                onLoad={(e) => { if (e.currentTarget.naturalWidth <= 120) setThumb(`https://i.ytimg.com/vi/${youtube}/hqdefault.jpg`); }}
+                onError={() => setThumb((t) => (t.includes('maxres') ? `https://i.ytimg.com/vi/${youtube}/hqdefault.jpg` : null))} />
+            )}
+            <div className="kg-reel__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            </div>
+          </>
+        )}
+      </div>
+      <div className="kgp-work-feature__text">
         {(category || year) && (
           <div className="kg-work__meta">
             {category && <span>{category}</span>}
@@ -70,30 +75,27 @@ function VideoWorkCard({ youtube, index, category, year, title, tags = [] }) {
           </div>
         )}
         <h3 className="kg-work__title">{title}</h3>
+        {body && <p className="kgp-work-feature__body">{body}</p>}
         {tags.length > 0 && (
           <div className="kg-work__tags">
             {tags.map((t) => <span key={t} className="kg-work__tag">{t}</span>)}
           </div>
         )}
+        <div style={{ marginTop: 8 }}>
+          <Button variant="link" arrow href={`https://www.youtube.com/watch?v=${youtube}`} target="_blank" rel="noopener">
+            Watch on YouTube
+          </Button>
+        </div>
       </div>
-      {open && ReactDOM.createPortal(
-        <div className="kgp-lightbox" role="dialog" aria-modal="true" aria-label="Tagalog Tea Time video" onClick={close}>
-          <button type="button" className="kgp-lightbox__close" aria-label="Close video" onClick={close}>&times;</button>
-          <div className="kgp-lightbox__frame" onClick={(e) => e.stopPropagation()}>
-            <iframe src={`https://www.youtube-nocookie.com/embed/${youtube}?autoplay=1&rel=0`}
-              title="Tagalog Tea Time on YouTube"
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen />
-          </div>
-        </div>,
-        document.body,
-      )}
-    </>
+    </div>
   );
 }
 
 function WorkGrid() {
   const [f, setF] = React.useState('All');
   const shown = f === 'All' ? WORK : WORK.filter((w) => w.cat === f);
+  const cards = shown.filter((w) => !w.youtube);
+  const features = shown.filter((w) => w.youtube);
   return (
     <section id="work" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
@@ -105,18 +107,19 @@ function WorkGrid() {
             <Tag key={x} active={f === x} onClick={() => setF(x)}>{x}</Tag>
           ))}
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: 'clamp(1.25rem,2.5vw,2.25rem)', marginTop: 38 }} className="kgp-work-grid">
-          {shown.map((w, i) => w.youtube ? (
-            <VideoWorkCard key={w.id} youtube={w.youtube}
-              index={String(i + 1).padStart(2, '0')} category={w.category} year={w.year}
-              title={w.title} tags={w.tags} />
-          ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 'clamp(1.25rem,2.5vw,2.25rem)', marginTop: 38 }} className="kgp-work-grid">
+          {cards.map((w, i) => (
             <WorkCard key={w.id} image={w.image}
               index={String(i + 1).padStart(2, '0')} category={w.category} year={w.year}
               title={w.title} tags={w.tags} href={w.href}
               {...(w.external ? { target: '_blank', rel: 'noopener' } : {})} />
           ))}
         </div>
+        {features.map((w, i) => (
+          <VideoFeature key={w.id} youtube={w.youtube}
+            index={String(cards.length + i + 1).padStart(2, '0')} category={w.category} year={w.year}
+            title={w.title} body={w.body} tags={w.tags} />
+        ))}
       </div>
     </section>
   );
