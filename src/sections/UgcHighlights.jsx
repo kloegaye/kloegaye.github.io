@@ -5,8 +5,8 @@ const { SectionHeader, Button } = window.KloeGayeDesignSystem_152bdb;
 // with the link"). `driveId: null` renders a "coming soon" placeholder tile.
 const HIGHLIGHTS = [
   { brand: 'Monsoon Tea One Nimman', driveId: '182oi-TLCozQbuRjOBgb1OmZMYtTW4TzQ' },
-  { brand: 'CHAAN Tea House', driveId: '1cpgf5vr1H9ZIl-xOTr8Un6r4I5JTY3T8' },
-  { brand: 'Cafe Slow Hoi An', driveId: '1-z3F8FojGD3TvIyg6SWkR9CWUWbBG87-' },
+  { brand: 'CHAAN Tea House', driveId: '1-z3F8FojGD3TvIyg6SWkR9CWUWbBG87-' },
+  { brand: 'Cafe Slow Hoi An', driveId: '1cpgf5vr1H9ZIl-xOTr8Un6r4I5JTY3T8' },
 ];
 
 // Vertical (9:16) second row - shown on the UGC page under HIGHLIGHTS.
