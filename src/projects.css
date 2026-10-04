@@ -118,7 +118,7 @@
   .kgp-pj-feature, .kgp-pj-feature:hover { transition: none; transform: none; }
 }
 
-/* spoken word: Instagram embeds */
+/* spoken word + advocacy: Instagram / TikTok embeds */
 .kgp-pj-poems {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -128,13 +128,16 @@
 }
 .kgp-pj-poem { min-width: 0; }
 .kgp-pj-poem .instagram-media,
+.kgp-pj-poem .tiktok-embed,
 .kgp-pj-poem iframe { min-width: 0 !important; width: 100% !important; border-radius: var(--radius-lg) !important; }
-.kgp-pj-poem blockquote.instagram-media {
+.kgp-pj-poem blockquote.instagram-media,
+.kgp-pj-poem blockquote.tiktok-embed {
   padding: 2rem 1.5rem;
   border: 1px solid var(--border);
   background: var(--surface);
 }
-.kgp-pj-poem blockquote.instagram-media a { color: var(--accent); font-weight: 500; }
+.kgp-pj-poem blockquote.instagram-media a,
+.kgp-pj-poem blockquote.tiktok-embed a { color: var(--accent); font-weight: 500; }
 
 .kgp-pj-end {
   display: flex;

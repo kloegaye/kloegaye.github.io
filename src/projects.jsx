@@ -3,7 +3,8 @@
 // Same global-bundle setup as main.jsx: React/ReactDOM and
 // window.KloeGayeDesignSystem_152bdb are loaded as classic <script> tags
 // before this module. Spoken word pieces use Instagram's official embed
-// (blockquote + embed.js); without the script they degrade to plain links.
+// (blockquote + embed.js) and advocacy posts TikTok's (same pattern); without
+// the scripts they degrade to plain links.
 
 import './ds/styles.css';
 import './app.css';
@@ -33,6 +34,12 @@ const POEMS = [
   'https://www.instagram.com/p/DY8pXQexhVC/',
   'https://www.instagram.com/p/Dck22U2Rrpx/',
   'https://www.instagram.com/p/DUKVwjKEbcY/',
+];
+
+const ADVOCACY = [
+  '7687901336255417620',
+  '7683710687457119509',
+  '7673889816223714580',
 ];
 
 const SPOTIFY_URL = 'https://open.spotify.com/show/033LR0sDePGK4ooQQHcmMY';
@@ -73,13 +80,33 @@ function InstagramEmbed({ url }) {
   );
 }
 
+function TikTokEmbed({ id }) {
+  const url = `https://www.tiktok.com/@kloe.creates/photo/${id}`;
+  return (
+    <div className="kgp-pj-poem">
+      <blockquote className="tiktok-embed" cite={url} data-video-id={id}
+        style={{ margin: 0, width: '100%', minWidth: 0, maxWidth: '100%' }}>
+        <section>
+          <a href={url} target="_blank" rel="noopener noreferrer">View on TikTok</a>
+        </section>
+      </blockquote>
+    </div>
+  );
+}
+
+function loadScript(src) {
+  if (document.querySelector(`script[src="${src}"]`)) return;
+  const s = document.createElement('script');
+  s.src = src;
+  s.async = true;
+  document.body.appendChild(s);
+}
+
 function Projects() {
   React.useEffect(() => {
-    if (window.instgrm) { window.instgrm.Embeds.process(); return; }
-    const s = document.createElement('script');
-    s.src = 'https://www.instagram.com/embed.js';
-    s.async = true;
-    document.body.appendChild(s);
+    if (window.instgrm) window.instgrm.Embeds.process();
+    else loadScript('https://www.instagram.com/embed.js');
+    loadScript('https://www.tiktok.com/embed.js');
   }, []);
 
   return (
@@ -92,7 +119,7 @@ function Projects() {
             <h1 className="kgp-pj-title">Personal <em>projects</em></h1>
             <p className="kgp-pj-lede">
               The work I make for myself: books I wrote and published on my own, poems I perform,
-              and a podcast I host.
+              causes I speak up for, and a podcast I host.
             </p>
           </div>
         </div>
@@ -133,6 +160,13 @@ function Projects() {
           <SectionHeader kicker="Spoken word poetry" title={<>Poems, out <em>loud</em></>} />
           <div className="kgp-pj-poems">
             {POEMS.map((u) => <InstagramEmbed key={u} url={u} />)}
+          </div>
+        </Section>
+
+        <Section id="advocacy">
+          <SectionHeader kicker="Advocacy" title={<>Causes I speak <em>up</em> for</>} />
+          <div className="kgp-pj-poems">
+            {ADVOCACY.map((id) => <TikTokEmbed key={id} id={id} />)}
           </div>
         </Section>
 
