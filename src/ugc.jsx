@@ -160,7 +160,7 @@ const REELS = [
   { slug: 'tagalog-native', platform: 'Meta Ads', duration: '0:38', stat: <>1,550+ purchases</>, title: <>The winning hook, cut for Tagalog</> },
   { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>Top seller &middot; 3,150+ purchases</>, title: <>Real voices, not an AI</> },
   { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
-  { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', title: <>Tagalog greetings: formal vs casual</> },
+  { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', stat: <>750+ purchases</>, title: <>Tagalog greetings: formal vs casual</> },
   { slug: 'filipino-romantic-names', platform: 'TikTok', duration: '0:36', title: <>&ldquo;Mahal ko&rdquo; &amp; other pet names</> },
   { slug: 'tagalog-cebuano', platform: 'TikTok', duration: '0:20', title: <>Tagalog vs Cebuano: emotions</> },
   { slug: 'icrc-finger-down', platform: 'TikTok · ICRC', duration: '0:52', title: <>Put a finger down, conflict edition</> },

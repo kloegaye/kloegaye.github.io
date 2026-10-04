@@ -20,7 +20,7 @@ const VERTICALS = [
 // UGC ads that earned 6-figure revenue. Tiles keep each video's own shape
 // (read from the Drive thumbnail) instead of forcing 9:16.
 const REVENUE_ADS = [
-  { brand: 'UGC ad 1', driveId: '1w_zEibZ5wJhoW3zGJIWhmKxAFf9f39Fb' },
+  { brand: 'UGC ad 1', driveId: '1w_zEibZ5wJhoW3zGJIWhmKxAFf9f39Fb', stat: <>750+ purchases</> }, // Tagalog greetings (Ad Script 21)
   { brand: 'UGC ad 2', driveId: '1OZGOSytlmbtSSg_q3ybA12vBHuudvNmj' },
   { brand: 'UGC ad 3', driveId: '1zQQ0EpAzYGqExW22Hp7JYx77ZEwxRpIT' },
   { brand: 'UGC ad 4', driveId: '1yWq_FH7YzBpKjloj8uKJvnfSyQkCHZQN' },
@@ -50,7 +50,7 @@ const ORGANIC_VIDEOS = [
  * Same look as the ds ReelCard (reuses its .kg-reel classes). Shows the Drive
  * thumbnail; on click swaps in Drive's embedded player.
  */
-function HighlightReel({ brand, driveId, fit = false, showTitle = true, platform = 'UGC' }) {
+function HighlightReel({ brand, driveId, fit = false, showTitle = true, platform = 'UGC', stat }) {
   const [open, setOpen] = React.useState(false);
   const [thumbOk, setThumbOk] = React.useState(true);
   const [ratio, setRatio] = React.useState(null);
@@ -95,7 +95,7 @@ function HighlightReel({ brand, driveId, fit = false, showTitle = true, platform
       </div>
       <div className="kg-reel__bottom">
         {showTitle && <div className="kg-reel__title">{brand}</div>}
-        <div className="kg-reel__stat">Tap to play &middot; sound on</div>
+        <div className="kg-reel__stat">{stat ?? <>Tap to play &middot; sound on</>}</div>
       </div>
     </div>
   );
