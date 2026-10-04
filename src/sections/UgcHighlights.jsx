@@ -150,7 +150,7 @@ function IcrcMessage() {
     <section id="icrc" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
         <SectionHeader kicker="International Committee of the Red Cross" title={<>Capture your brand&rsquo;s <em>message</em></>}
-          lede="Collaborating with Red Cross colleagues from around the world, International Humanitarian Law experts, and more for educational and entertaining short-form video content. Involved in every stage of production, from brainstorming and strategy to writing, filming, editing and publishing." />
+          lede="Educational and engaging organic short-form content" />
         <div className="kgp-highlight-grid kgp-highlight-grid--vertical">
           {ICRC_VIDEOS.map((h) => <HighlightReel key={h.driveId} {...h} platform="TikTok" showTitle={false} />)}
         </div>
