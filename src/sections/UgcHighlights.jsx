@@ -26,11 +26,19 @@ const REVENUE_ADS = [
   { brand: 'UGC ad 4', driveId: '1yWq_FH7YzBpKjloj8uKJvnfSyQkCHZQN' },
 ];
 
+// ICRC TikToks (vertical) - "Capture your brand's message" section.
+const ICRC_VIDEOS = [
+  { brand: 'ICRC TikTok 1', driveId: '1nE6xl0PgYIBaGqWx4d0eAaHm_EKYDYCi' },
+  { brand: 'ICRC TikTok 2', driveId: '1jlf6shWKsZZL4wKiMTlsQxaMHycm4dYs' },
+  { brand: 'ICRC TikTok 3', driveId: '1mlEA66Ke_pRNG1Qx-453xbEIxiaJhMfG' },
+  { brand: 'ICRC TikTok 4', driveId: '1spCNT0JO0YXvmuQK7qgoHPQklX6KOdX1' },
+];
+
 /*
  * Same look as the ds ReelCard (reuses its .kg-reel classes). Shows the Drive
  * thumbnail; on click swaps in Drive's embedded player.
  */
-function HighlightReel({ brand, driveId, fit = false, showTitle = true }) {
+function HighlightReel({ brand, driveId, fit = false, showTitle = true, platform = 'UGC' }) {
   const [open, setOpen] = React.useState(false);
   const [thumbOk, setThumbOk] = React.useState(true);
   const [ratio, setRatio] = React.useState(null);
@@ -69,7 +77,7 @@ function HighlightReel({ brand, driveId, fit = false, showTitle = true }) {
           onLoad={(e) => { const { naturalWidth: w, naturalHeight: h } = e.currentTarget; if (w && h) setRatio({ w, h }); }} />
       )}
       <div className="kg-reel__scrim" />
-      <div className="kg-reel__top"><span className="kg-reel__platform">UGC</span></div>
+      <div className="kg-reel__top"><span className="kg-reel__platform">{platform}</span></div>
       <div className="kg-reel__play" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
       </div>
@@ -136,4 +144,22 @@ function UgcAds() {
   );
 }
 
-Object.assign(window, { UgcHighlights, UgcAds, UgcEssence });
+// "Capture your brand's message" - ICRC TikTok work, under UgcAds.
+function IcrcMessage() {
+  return (
+    <section id="icrc" style={{ paddingBlock: 'var(--section-y)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
+        <SectionHeader kicker="International Committee of the Red Cross" title={<>Capture your brand&rsquo;s <em>message</em></>}
+          lede="Collaborating with Red Cross colleagues from around the world, International Humanitarian Law experts, and more for educational and entertaining short-form video content. Involved in every stage of production, from brainstorming and strategy to writing, filming, editing and publishing." />
+        <div className="kgp-highlight-grid kgp-highlight-grid--vertical">
+          {ICRC_VIDEOS.map((h) => <HighlightReel key={h.driveId} {...h} platform="TikTok" showTitle={false} />)}
+        </div>
+        <div style={{ marginTop: 32 }}>
+          <Button arrow href="https://www.tiktok.com/@icrc" target="_blank" rel="noopener noreferrer">See the ICRC on TikTok</Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { UgcHighlights, UgcAds, UgcEssence, IcrcMessage });
