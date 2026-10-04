@@ -101,7 +101,8 @@ function UgcHighlights() {
   return (
     <section id="ugc" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
-        <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>} />
+        <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>}
+          lede="Aesthetic, scroll-stopping UGC for cafés and lifestyle brands" />
         <div className="kgp-highlight-grid">
           {HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
         </div>
@@ -116,7 +117,8 @@ function UgcEssence() {
   return (
     <section id="ugc-highlights" style={{ paddingBlock: 'var(--section-y)' }}>
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' }}>
-        <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>} />
+        <SectionHeader kicker="UGC highlights" title={<>Capture your brand&rsquo;s <em>essence</em></>}
+          lede="Aesthetic, scroll-stopping UGC for cafés and lifestyle brands" />
         <div className="kgp-highlight-grid">
           {HIGHLIGHTS.map((h) => <HighlightReel key={h.brand} {...h} />)}
         </div>
