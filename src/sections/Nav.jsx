@@ -38,6 +38,9 @@ function Nav() {
           <a href="/projects.html" className="kgp-navlink kgp-navlink--keep" style={{
             fontSize: 14, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.01em',
           }}>Projects</a>
+          <a href="/ugc.html" className="kgp-navlink kgp-navlink--keep" style={{
+            fontSize: 14, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.01em',
+          }}>UGC</a>
           <a href="/cv.html" className="kgp-navlink kgp-navlink--keep" style={{
             fontSize: 14, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.01em',
           }}>CV</a>
