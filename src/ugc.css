@@ -31,6 +31,8 @@
 
 /* click-to-play video reels (extends the ds .kg-reel card) */
 .kgp-reel-live { cursor: pointer; }
+/* Drive-hosted tiles in the reel grid: same 9:16 shape as the local reels */
+.kgp-reel-grid .kg-reel.kgp-highlight { aspect-ratio: 9 / 16; }
 .kgp-reel-live video {
   position: absolute;
   inset: 0;

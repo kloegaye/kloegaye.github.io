@@ -161,9 +161,10 @@ const REELS = [
   { slug: 'not-an-ai', platform: 'Meta Ads', duration: '0:34', stat: <>Top seller &middot; 3,150+ purchases</>, title: <>Real voices, not an AI</> },
   { slug: 'tagalog-beginner-expert', platform: 'Meta Ads', duration: '0:26', title: <>Beginner vs expert: Tagalog</> },
   { slug: 'tagalog-greetings', platform: 'Meta Ads', duration: '0:23', stat: <>750+ purchases</>, title: <>Tagalog greetings: formal vs casual</> },
-  { slug: 'filipino-romantic-names', platform: 'TikTok', duration: '0:36', title: <>&ldquo;Mahal ko&rdquo; &amp; other pet names</> },
-  { slug: 'tagalog-cebuano', platform: 'TikTok', duration: '0:20', title: <>Tagalog vs Cebuano: emotions</> },
-  { slug: 'icrc-finger-down', platform: 'TikTok · ICRC', duration: '0:52', title: <>Put a finger down, conflict edition</> },
+  // Played from Kloe's Google Drive (must stay shared as "Anyone with the link").
+  { slug: 'drive-1', driveId: '1o67JmxUUMphhxTEUVgWecN7Gc-Evw3Fb' },
+  { slug: 'drive-2', driveId: '1-tuUNtnCw1icCsLY2IYs-9dq43p2QICV' },
+  { slug: 'drive-3', driveId: '1y3hzQswvv-wlMaj-JWA4jSWLBwgnYFlG' },
 ];
 
 /*
@@ -224,8 +225,9 @@ function Reels() {
         <SectionHeader kicker="Selected reels" title={<>Scroll-stopping <em>UGC</em></>}
           lede="A curated set of the hooks and formats that performed best. Vertical, native, and built to be watched with the sound on." />
         <div className="kgp-reel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1rem,2vw,1.75rem)', marginTop: 38 }}>
-          {REELS.map((r) => (
-            <VideoReel key={r.slug} {...r} />
+          {REELS.map((r) => (r.driveId
+            ? <window.HighlightReel key={r.slug} brand="UGC video" driveId={r.driveId} showTitle={false} />
+            : <VideoReel key={r.slug} {...r} />
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--text-faint)', marginTop: 20, textTransform: 'uppercase' }}>

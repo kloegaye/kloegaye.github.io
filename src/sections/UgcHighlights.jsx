@@ -191,4 +191,4 @@ function UgcMessage() {
   );
 }
 
-Object.assign(window, { UgcHighlights, UgcAds, UgcEssence, IcrcMessage, UgcMessage });
+Object.assign(window, { HighlightReel, UgcHighlights, UgcAds, UgcEssence, IcrcMessage, UgcMessage });
