@@ -25,7 +25,6 @@ export default defineConfig({
         main: resolve(root, 'index.html'),
         ugc: resolve(root, 'ugc.html'),
         cv: resolve(root, 'cv.html'),
-        cvMarketing: resolve(root, 'cv-marketing.html'),
         projects: resolve(root, 'projects.html'),
       },
     },
