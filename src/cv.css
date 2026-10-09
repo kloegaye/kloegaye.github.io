@@ -30,6 +30,15 @@
 .kgp-cv-contact a { color: var(--text-muted); text-decoration: none; }
 .kgp-cv-contact a:hover { color: var(--accent); }
 
+/* "What I bring" grid (tailored CV) */
+.kgp-cv-strengths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+.kgp-cv-strengths p { margin: 0; color: var(--text-muted); font-size: 15px; line-height: 1.55; }
+@media (max-width: 640px) { .kgp-cv-strengths { grid-template-columns: 1fr; } }
+
 /* label column + content column */
 .kgp-cv-block {
   display: grid;
@@ -124,7 +133,8 @@
   .kgp-cv-lede, .kgp-cv-orglede, .kgp-cv-orgname span, .kgp-cv-contact a { color: #444 !important; }
   .kgp-cv-dates, .kgp-cv-sublabel { color: #666 !important; }
   .kgp-svc-wins li::before { background: #111; }
-  .kgp-cv-role, .kgp-cv-skill { break-inside: avoid; }
+  .kgp-cv-role, .kgp-cv-skill, .kgp-cv-strengths > div { break-inside: avoid; }
+  .kgp-cv-strengths p { color: #444 !important; font-size: 13px; }
   .kgp-cv-orgname { break-after: avoid; }
   .kgp-cv-block { padding: 1.25rem 0; }
   .kgp-cv-lede { font-size: 14px; }
