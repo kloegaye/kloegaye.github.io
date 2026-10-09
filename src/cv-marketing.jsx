@@ -14,17 +14,17 @@ const { Kicker, Button, Tag } = window.KloeGayeDesignSystem_152bdb;
 const CONTAINER = { maxWidth: 'var(--container)', margin: '0 auto', padding: '0 var(--gutter)' };
 
 const STRENGTHS = [
-  ['End-to-end campaigns', 'Positioning, audience definition, channel plans, launch and post-campaign analysis, for an app, a global NGO and seven small-business clients.'],
-  ['Creative and marketing tools', 'Brief and lead creators; produce video, artwork, ad assets and templates; wrote the ICRC’s global social media brand guidelines.'],
-  ['Data-driven growth', 'Read content and ad performance in-flight and move spend and effort to what works. Multiple six figures (USD) in revenue from Meta Ads creative.'],
-  ['Audience growth beyond the core', 'Grew Ling’s main Instagram by 200% in market share organically, and built localised campaigns for Thai, Tagalog, UK and Australian audiences.'],
-  ['Brand identity', 'Build a clear identity, core pillars and a consistent look that a whole team can follow, then keep every asset on-brand.'],
-  ['Creator’s perspective', 'Podcast host, published author and on-camera creator, so I know what it takes to build an audience from the talent’s side.'],
+  ['Full campaign lifecycle', 'Positioning, audience definition, channel strategy, launch and post-campaign analysis, for an app, a global NGO and seven small-business clients.'],
+  ['Identity, pillars and creative', 'Build a clear identity and core pillars, then the tools to match: video, artwork, ad assets and templates. Wrote the ICRC’s global social media brand guidelines.'],
+  ['Data-driven optimisation', 'Read content and ad performance in-flight and move budget to what works. Multiple six figures (USD) in revenue from Meta Ads creative; 4,400+ purchases from Thai-language ads alone.'],
+  ['Audience growth beyond core fans', 'Grew Ling’s main Instagram by 200% in market share organically, with localised campaigns for Thai, Tagalog, UK and Australian audiences.'],
+  ['Team standards at scale', 'Lead and brief a team of creators across 6+ brand profiles and 8+ languages, with clear briefs and quality standards so output can grow without losing quality.'],
+  ['The talent’s side', 'Podcast host on Spotify, published author and on-camera creator. I know first-hand what it takes for an artist to build an audience, and I love helping local talent do it.'],
 ];
 
 const SKILLS = [
-  ['Marketing strategy', ['Campaign planning', 'Audience growth', 'Brand identity and guidelines', 'Creative direction', 'Launch planning', 'Post-campaign analysis']],
-  ['Leadership and partners', ['Team leadership', 'Briefing creators', 'Client management', 'Staff training', 'Reporting to leadership']],
+  ['Marketing strategy', ['Campaign planning', 'Audience growth', 'Brand identity and pillars', 'Creative direction', 'Launch planning', 'Budget allocation', 'Post-campaign analysis']],
+  ['Leadership and partners', ['Team leadership', 'Briefing creators', 'Talent and client relationships', 'Staff training', 'Reporting to leadership']],
   ['Paid and performance', ['Meta Ads creative', 'Apple Search Ads', 'App Store Optimization', 'SEO and video SEO', 'Analytics and reporting']],
   ['Content', ['Short-form and long-form video', 'On-camera presenting', 'Scriptwriting', 'Video editing', 'Podcast production', 'UGC']],
   ['Channels', ['TikTok', 'Instagram', 'YouTube', 'Facebook', 'Threads', 'Spotify', 'LinkedIn']],
@@ -70,7 +70,7 @@ const EXPERIENCE = [
     org: 'SME Growth Services',
     roles: [
       { title: 'Social Media Marketing Specialist', dates: 'November 2020 – November 2021', points: [
-        'Day-to-day contact for seven Australian small and medium businesses, managing their Facebook and LinkedIn marketing.',
+        'Day-to-day point person for seven Australian small and medium businesses, managing their Facebook and LinkedIn marketing and paid media.',
         'Grew company and client pages through content creation, paid media and engagement.',
         'Supported the Head of Marketing in implementing the marketing strategy.',
       ] },
@@ -131,7 +131,7 @@ function CV() {
       <main style={{ ...CONTAINER, maxWidth: 1080 }}>
         <div className="kgp-cv-top">
           <div>
-            <Kicker rule>Marketing / Campaigns, content &amp; audience growth</Kicker>
+            <Kicker rule>Marketing Manager / Campaigns, creative &amp; audience growth</Kicker>
             <h1 className="kgp-cv-name">Kloe <em>Gaye</em></h1>
           </div>
           <div className="kgp-cv-contact">
@@ -148,13 +148,14 @@ function CV() {
           <p className="kgp-cv-lede">
             Marketing and social media lead with 6 years of experience building audiences and running
             content-led campaigns for a fast-growing app (Ling), a global humanitarian organisation (ICRC)
-            and agency clients in Australia and Singapore. I plan campaigns end to end, from positioning and
-            audience to launch and post-campaign analysis, lead and brief creative teams, and use platform
+            and agency clients in Australia and Singapore. I own campaigns end to end, from positioning and
+            audience to launch and post-campaign analysis; lead and brief creative teams; and use platform
             data to sharpen what works while it&rsquo;s live. Generated multiple six figures (USD) in revenue
             through Meta Ads creative, grew Ling&rsquo;s main Instagram by 200% in market share, and wrote the
-            ICRC&rsquo;s global social media brand guidelines. A creator myself (podcast host, published
-            author, on-camera talent), I&rsquo;m passionate about helping local talent find and grow their
-            audience. Based in Chiang Mai, Thailand.
+            ICRC&rsquo;s global social media brand guidelines. I know the streaming and short-form landscape
+            from both sides: as a marketer, and as a creator myself (podcast host on Spotify, published author,
+            on-camera talent). A relationship-driven team player who loves music and supporting local talent.
+            Based in Chiang Mai, Thailand.
           </p>
         </Block>
 
